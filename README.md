@@ -76,11 +76,13 @@
 - npm install jquery
 - npm install popper
 - npm i
-- style.css Git
+
 
 
 ## Style CSS
 ```sh
+- style.css ==> 
+
 /* You can add global styles to this file, and also import other style files */
 
 /* Bootstrap Ekle */
