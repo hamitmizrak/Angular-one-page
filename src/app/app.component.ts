@@ -6,6 +6,7 @@ import { RouterOutlet } from '@angular/router';
 import { OnepageHeaderComponent } from './onepage-header/onepage-header.component';
 import { OnepageMainComponent } from './onepage-main/onepage-main.component';
 import { OnepageFooterComponent } from './onepage-footer/onepage-footer.component';
+import { OnepageProjectNameComponent } from './onepage-project-name/onepage-project-name.component';
 
 // Dikkat: Bütün Componentleri buraya eklemek zorundayız
 @Component({
@@ -14,6 +15,7 @@ import { OnepageFooterComponent } from './onepage-footer/onepage-footer.componen
   imports: [
     CommonModule, 
     RouterOutlet, 
+    OnepageProjectNameComponent,
     OnepageHeaderComponent, 
     OnepageMainComponent, 
     OnepageFooterComponent
