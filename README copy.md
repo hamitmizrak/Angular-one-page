@@ -9,7 +9,6 @@
 ---
 
 ## Kurulumlar
-```sh
 > node -v
 > npm -v
 > npm version
@@ -23,15 +22,7 @@
 > ng serve
 > ng serve --port 9999
 > ng --help
-```
-
-## Proje Serve
-```sh
-> ng serve
-> ng serve --port 9999
-
-```
-
+>
 
 ## Angular CLI UNINSTALL (Dikkat: Keyfi olarak silmeyin.)
 > npm list -g
@@ -39,41 +30,14 @@
 > npm cache clean  
 > npm install -g @angular/cli@latest
 
-
-## VS Code Plugins
-> Angular Essentials (Version 16)
-> Angular Language Service
-> Angular 10 Snippets - TypeScript, Html, Angular Material, ngRx, RxJS & Flex Layout
-> Angular Schematics
-
-
 ## Angular CLI Hazır Bileşenler
 > ng generate component onepage-header
-> 
-> ng g component      onepage-header
-> ng g component      onepage-main
-> ng g component      onepage-footer
-> 
-> ng g service        onepage-service
-> ng g module         onepage-module
-> ng g pipe           onepage-pipeline
-> ng g directive      onepage-pipeline
-> ng g interface      onepage-pipeline
-> ng g enum           onepage-pipeline
-
-## Angular Configuration
-> npm config list -l
-> npm config delete ayarAdi
-> npm update modulAdi --save-dev
-> npm uninstall modulAdi --save-dev
-> npm get ayarAdi
-
-
+> ng g component onepage-header
 
 ## Angular NPM Kurulumları
 - npm install bootstrap 
-- npm install font-awesome angular-font-awesome
-- npm i
+- npm install font-awesome 
+- 
 - style.css Git
 
 ## Angular Hakkında
