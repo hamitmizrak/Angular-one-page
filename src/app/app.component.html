@@ -1,13 +1,23 @@
-
 <div>
   <!-- one way data binding -->
-  Project Name: <span class="text-primary">{{projectName}}</span>  
-  <br> 
-  Merhabalar <span  class="text-primary">{{name}} - {{surname}}</span>  </div>
-<hr>
+  Project Name: <span class="text-primary">{{ projectName }}</span>
+  <br />
+  Merhabalar <span class="text-primary">{{ name }} - {{ surname }}</span>
+</div>
+<hr />
 <!-- Component Selector -->
-<app-onepage-header> </app-onepage-header>
-<app-onepage-main></app-onepage-main>
-<app-onepage-footer></app-onepage-footer>
 
+<!-- start Header -->
+<app-onepage-header> </app-onepage-header>
+<!-- end Header -->
+
+<!-- start Main -->
+<app-onepage-main> </app-onepage-main>
+<!-- end Main -->
+
+<!-- start Footer -->
+<app-onepage-footer> </app-onepage-footer>
+<!-- end Header -->
+
+<!-- Router -->
 <router-outlet></router-outlet>
