@@ -1,5 +1,6 @@
 # OnePage
 
+# Permalink
 [Project](http://localhost:4200/)
 [GitHub](https://github.com/hamitmizrak/Angular-one-page)
 [Angular GitHub](https://github.com/angular/angular-cli)
@@ -75,6 +76,7 @@
 - npm install font-awesome angular-font-awesome
 - npm install jquery
 - npm install popper
+- npm install alertifyjs
 - npm i
 
 
@@ -236,6 +238,11 @@ npm run nodemon_q
 ```
 
 ---
+
+
+---
+---
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.

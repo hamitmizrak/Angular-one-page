@@ -1,3 +1,11 @@
+## Angular CLI Hazır Bileşenler
+> ng g component      onepage-header
+> ng g component      onepage-main
+> ng g component      onepage-footer
+
+
+## AppComponent (Component Eklemek)
+```sh
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
@@ -22,7 +30,10 @@ import { OnepageFooterComponent } from './onepage-footer/onepage-footer.componen
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  name="Hamit";
-  surname="Mızrak";
-  projectName = 'One Page';
+  title = 'one-page';
 }
+```
+
+## Header Component
+## Main Component
+## Footer Component
