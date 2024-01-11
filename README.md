@@ -73,6 +73,8 @@
 ## Angular NPM Kurulumları
 - npm install bootstrap 
 - npm install font-awesome angular-font-awesome
+- npm install jquery
+- npm install popper
 - npm i
 - style.css Git
 
