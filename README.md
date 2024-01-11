@@ -78,6 +78,18 @@
 - npm i
 - style.css Git
 
+
+## Style CSS
+```sh
+/* You can add global styles to this file, and also import other style files */
+
+/* Bootstrap Ekle */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* Font awesome */
+@import "font-awesome/css/font-awesome.min.css";
+```
+
 ## Angular Hakkında
 - Angular 2009 Google Çalışan Misko tarafında kendi projelerinde kullanmak üzere başlıyor.
 - Açık Kaynak Kodludur.
