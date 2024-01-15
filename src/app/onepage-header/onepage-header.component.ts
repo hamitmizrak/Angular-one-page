@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
   standalone: true,
 
   // modül ekleme
-  imports: [],
+  imports: [CommonModule],
 
   // Html5 Url
   templateUrl: './onepage-header.component.html',

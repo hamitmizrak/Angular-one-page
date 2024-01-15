@@ -5,14 +5,20 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-onepage-project-name',
   standalone: true,
   imports: [CommonModule],
+
   // Html5 Url
   // templateUrl: './onepage-header.component.html',
   template: `
     <div>
-      <!-- one way data binding -->
-      Project Name: <span class="text-primary">One Pages</span>
-      <br />
-      Merhabalar <span class="text-primary">Hamit - Mızrak</span>
+      <ul class="list-group list-group-numbered">
+        <li class="list-group-item active">{{ projectName }}</li>
+        <li class="list-group-item">{{ name }} - {{ surname }}</li>
+        <li class="list-group-item">{{ projectAuthor }}</li>
+        <li class="list-group-item">{{ projectVersion }}</li>
+        <li class="list-group-item">{{ projectYear }}</li>
+        <li class="list-group-item">{{ projectKeywords }}</li>
+        <li class="list-group-item disabled">Disabled item</li>
+      </ul>
     </div>
     <hr />
   `,
@@ -20,14 +26,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OnepageProjectNameComponent {
-  name:string = 'Hamit';
-  surname:string = 'Mızrak';
-  projectName:String = 'One Page';
-  projectVersion:String = 'v1.0.0'; //Semantic Version
-  projectDescription:String = 'One Page Project';
-  projectAuthor:String = 'Hamit Mızrak';
-  projectLicense:String = 'MIT';
-  projectRepository:String = '';
-  projectKeywords:String = '';
-  projectYear:number =2024;
+  name: string = 'Hamit';
+  surname: string = 'Mızrak';
+  projectName: String = 'One Page';
+  projectVersion: String = 'v1.0.0'; //Semantic Version
+  projectDescription: String = 'One Page Project';
+  projectAuthor: String = 'Hamit Mızrak';
+  projectLicense: String = 'MIT';
+  projectRepository: String = '';
+  projectKeywords: String = '';
+  projectYear: number = 2024;
 }
