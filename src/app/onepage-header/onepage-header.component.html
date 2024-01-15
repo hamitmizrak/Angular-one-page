@@ -17,26 +17,28 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/deneme" aria-current="page"
+                    <a class="nav-link active" href={{navBar.navbar[0].link}} aria-current="page"
                         >
                         <!-- {{homePage}} -->
-                         {{navBar.navbar[0].name}} -
-                        <!-- <i class='fa-solid fa-house-chimney'>{{navBar.navbar[0].fontAwesome}}</i> -->
+                         <!-- {{navBar.navbar[0].name}}  -->
+                         <!-- Property Binding Yapalım -->
+                         <!-- <i class={{navBar.navbar[0].fontAwesome}}></i>  -->
+                         <i [class]='navBar.navbar[0].fontAwesome'></i> 
                         <span class="visually-hidden">(current)</span></a
                     >
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href={{navBar.navbar[1].link}}>
                         {{navBar.navbar[1].name}}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href={{navBar.navbar[2].link}}>
                         {{navBar.navbar[2].name}}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href={{navBar.navbar[3].link}}>
                         {{navBar.navbar[3].name}}
                     </a>
                 </li>

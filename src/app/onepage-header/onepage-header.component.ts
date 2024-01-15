@@ -28,6 +28,7 @@ export class OnepageHeaderComponent {
   // navBar:{}={};
   navBar:{
     isLogin:boolean,
+    // logo: string, (fontAwesome,picture,link,title)
     navbar:Array<any>,
     search:{}
   }={
