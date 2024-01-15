@@ -17,16 +17,30 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#" aria-current="page"
+                    <a class="nav-link active" href="/deneme" aria-current="page"
                         >
-                        {{homePage}}
+                        <!-- {{homePage}} -->
+                         {{navBar.navbar[0].name}} -
+                        <!-- <i class='fa-solid fa-house-chimney'>{{navBar.navbar[0].fontAwesome}}</i> -->
                         <span class="visually-hidden">(current)</span></a
                     >
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">
+                        {{navBar.navbar[1].name}}
+                    </a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        {{navBar.navbar[2].name}}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        {{navBar.navbar[3].name}}
+                    </a>
+                </li>
+                <!-- <li class="nav-item dropdown">
                     <a
                         class="nav-link dropdown-toggle"
                         href="#"
@@ -47,7 +61,7 @@
                             >Action 2</a
                         >
                     </div>
-                </li>
+                </li> -->
             </ul>
             <form class="d-flex my-2 my-lg-0">
                 <input
