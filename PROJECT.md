@@ -2,6 +2,7 @@
 > ng g component      onepage-header
 > ng g component      onepage-main
 > ng g component      onepage-footer
+> ng g c              onepage-navbar
 
 
 ## AppComponent (Component Eklemek)
