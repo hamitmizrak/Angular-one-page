@@ -36,13 +36,19 @@ export class OnepageHeaderComponent {
       logoTitle: string;
     };
     navbar: Array<any>;
-    search: {};
+    search: {
+      name: string;
+      placeholder: string;
+      type: string;
+      style:string;
+    };
   } = {
     isLogin: true,
     logo: {
       logoName: 'Logo',
       logoFontAwesome: 'fa-solid fa-code-branch',
-      logoPicture: 'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
+      logoPicture:
+        'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
       logoLink: '/',
       logoTitle: 'Title',
     },
@@ -62,6 +68,7 @@ export class OnepageHeaderComponent {
       name: 'Search',
       placeholder: 'Arama için ...',
       type: 'text',
+      style:'btn btn-primary'
     },
   }; //navBar Object
 } //end OnepageHeaderComponent
