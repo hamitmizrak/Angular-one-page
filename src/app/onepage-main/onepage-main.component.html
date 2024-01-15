@@ -55,18 +55,22 @@
 
           <!-- card -->
           <div *ngFor="let temp of blogCard" class="col-sm-12 col-md-3 col-lg-4">
-            <div class="card">
+            <a [href]="temp.link">
+            <div class="card mb-3">
               <img
                 class="card-img-top"
-                src="https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg"
+                [src]="temp.picture"
                 alt="Title"
               />
               <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
+                <h4 class="card-title">{{temp.id}}</h4>
+                <p class="card-text">{{temp.title}}</p>
+                <p class="card-text">{{temp.description}}</p>
+                <span class="text-muted float-end">{{temp.date}}</span>
               </div>
             </div>
-          </div>
+         </a>
+          </div>    <!--end card -->
         </div>
         <!--end row -->
       </div>

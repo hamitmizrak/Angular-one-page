@@ -2,3 +2,15 @@ p{
     text-transform: capitalize;
     text-align: justify;
 }
+
+img{
+    transition: 2s all;
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.9)
+}
+
+img:hover{
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.8);
+}
