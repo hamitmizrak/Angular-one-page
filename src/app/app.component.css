@@ -1,0 +1,50 @@
+/** PROJECT **********************************/
+/*
+Project Name: One Page
+Project Version: v1.0.0
+*/
+
+
+/** ROOT & COMMON **********************************/
+:root{
+    --one_page_bg: "black",
+    --one_page_color: "white",
+}
+*{
+    margin:0;
+    padding:0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 15px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:var(--one_page_bg) ;
+    background-color:var(--one_page_color) ;
+}
+
+p{
+
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.line-clamp5{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+/** HEADER **********************************/
+/** MAIN **********************************/
+/** BACK TO TOP **********************************/
+/** FOOTER **********************************/

@@ -35,5 +35,16 @@ export class AppComponent {
 ```
 
 ## Header Component
+ng generate component one-page-header (Class: OnepageHeaderComponent)
+
 ## Main Component
+ng generate component one-page-main (Class: OnepageMainComponent)
+
 ## Footer Component
+ng g component one-page-footer (Class: OnepageFooterComponent)
+
+## nfIf 
+- Karar mekanizması
+
+## ngFor
+-- Döngü mekanizması

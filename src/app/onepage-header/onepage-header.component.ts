@@ -1,3 +1,4 @@
+// import
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
@@ -18,5 +19,13 @@ import { Component } from '@angular/core';
   styleUrl: './onepage-header.component.css'
 })
 export class OnepageHeaderComponent {
+
+  homePage: String = 'Anasayfa 44';
+
+  // isLogin: boolean = true;
+
+  // navBar adında bir obje oluşturunuz.
+  // Logo(string), link(string), search, attribute oluşturuyorsunuz.
+  // Link (dizi)
 
 }

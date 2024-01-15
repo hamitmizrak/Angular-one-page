@@ -22,15 +22,17 @@
 > ng new one-page
 > cd one-page/
 > ng serve
-> ng serve --port 9999
+> ng serve --port 9999  0<=PORT<=65535 PORT<=1024 
 > ng --help
 ```
 
 ## Proje Serve
 ```sh
+> npm list -g
+> npm install -g typescript
+> npm install -g @angular/cli
 > ng serve
 > ng serve --port 9999
-
 ```
 
 
@@ -38,7 +40,7 @@
 > npm list -g
 > npm unistall -g angular/cli
 > npm cache clean  
-> npm install -g @angular/cli@latest
+> npm install -g @angular/cli@latest (Angular 17)
 
 
 ## VS Code Plugins
@@ -78,6 +80,8 @@
 - npm install popper
 - npm install alertifyjs
 - npm i
+- npm update 
+- npm uninstall modulAdi
 
 
 
@@ -103,7 +107,7 @@
 - Angular Typescript üzerine inşaa edilmiştir.
 - Typscript(Microsoft)= Javascript + ES5
 - Az kod yaz , çok iş yap
-- Javascript frameworktudur.
+- Angular Javascript frameworktudur.
 - Modüler bir yapıya sahiptir.
 - MVC mantığına göre çalışıyor.
 - Cross Platform
@@ -138,7 +142,7 @@
 ## Typescript Hakkında
 - Nesne yönelimli programlama yapacağımız bir dildir.
 - Compiler
-- TS= class + abstract inheritabce
+- TS= class + abstract inheritance
 - JS= Betik bir dildir
 - TS=Nesne yönellimli bir dildir.
 
@@ -148,10 +152,11 @@
 - 2015 (ES6)
 
 ## Node JS Hakkında
-- 2009 Asenkron olarak çalışan js'in server side olarak çalışmasına imkan sağladı
+- 2009 Asenkron olarak çalışan js'in server side olarak çalışmasına imkan sağladı.
 - Nodejs express,habi,meteor gibi framework yapılarıyla bir frameworktur.
 - Asenkron (multi process)
 - non-blocking
+- Google V8 Engine
 
 
 ## Script
@@ -220,6 +225,8 @@ npm audit
 
 ## Nodemon 
 ```sh
+Nodemon: Node Monitoring
+
 node template.js
 node template
 npm install
@@ -236,10 +243,7 @@ npm install -g nodemon --save
 npm run nodemon
 npm run nodemon_q
 ```
-
 ---
-
-
 ---
 ---
 

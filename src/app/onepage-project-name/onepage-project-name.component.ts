@@ -1,9 +1,15 @@
+// Import
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
+  // Html tag
   selector: 'app-onepage-project-name',
+
+  // bu component bağımsız olarak çalışsın
   standalone: true,
+
+  // Modul ekle
   imports: [CommonModule],
 
   // Html5 Url
@@ -22,9 +28,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     </div>
     <hr />
   `,
+
+  // Css Dosyası
   styleUrl: './onepage-project-name.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
+// Export
 export class OnepageProjectNameComponent {
   name: string = 'Hamit';
   surname: string = 'Mızrak';

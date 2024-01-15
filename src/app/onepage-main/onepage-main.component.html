@@ -1,35 +1,4 @@
 <p>onepage-main works!</p>
-<p *ngIf="dizi!=null; else noDizi">{{dizi}}</p>
-<p *ngIf="dizi; else noDizi">{{dizi[0]}}</p>
 
-
-<ng-template #noDizi>
-   <div class="alert alert-primary">
-    Data yoktur
-   </div>
-</ng-template>
-
-<hr>
-<h1>static</h1>
-<div *ngFor="let temp of footerData" class="card">
-   <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-   <div class="card-body">
-      <h4 class="card-title">{{temp.id}}</h4>
-      <h4 class="card-title">{{temp.title}}</h4>
-      <p class="card-text">{{temp.description}}</p>
-   </div>
-</div>
-<hr>
-
-<h2>dinamic</h2>
-<div *ngFor="let temp of footerData2" class="card">
-   <!-- src:Property binding yapalım -->
-   <img class="card-img-top" [src]="temp.imageUrl" [alt]="temp.imageUrl" />
-   <div class="card-body">
-      <h4 class="card-title">{{temp.id}}</h4>
-      <h4 class="card-title">{{temp.title}}</h4>
-      <p class="card-text">{{temp.description}}</p>
-   </div>
-</div>
 
 
