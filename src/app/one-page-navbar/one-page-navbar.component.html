@@ -37,20 +37,35 @@
             <span class="visually-hidden">(current)</span></a
           >
         </li>
+        <!--
+          Built-In-Pipe: Angularda hazır filtrelemenin olduğu yerdir.(Hazır)
+          Pipe(Custumise)
+          adi |uppercase: Büyük harf yapar.
+          adi |lowercase: Küçük harf yapar.
+          adi |titlecase: Her harfin ilk karakteri büyük harf yapar.
+          tarih |date
+          tarih |date:'shortTime'
+          tarih |date:'fullDate'
+          para birimi | currency
+          para birimi | currency: 'USD'
+          para birimi | currency: 'USD':'symbol'
+          para birimi | currency: 'USD':false
+          <div *ngFor="let temp of blogCard |slice:1:4"
+         -->
         <li class="nav-item">
-          <a class="nav-link" href="{{ navBar.navbar[1].link }}">
-            {{ navBar.navbar[1].name }}
+          <a class="nav-link" href="{{ navBar.navbar[1].link}}">
+            {{ navBar.navbar[1].name | titlecase  }}
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ navBar.navbar[2].link }}">
-            {{ navBar.navbar[2].name }}
+            {{ navBar.navbar[2].name| titlecase }}
           </a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link" href="{{ navBar.navbar[3].link }}">
-            {{ navBar.navbar[3].name }}
+            {{ navBar.navbar[3].name| titlecase }}
           </a>
         </li>
 
@@ -63,8 +78,8 @@
           <li class="nav-item">
             <a class="nav-link" href="{#">
               <!-- Hidden: Eğer rollerinde ADMIN değilse gösterme -->
-              <span [hidden]="User[0].rolles!=='ADMIN'" >{{ User[0].rolles}}</span>
-              <span>Hoşgeldiniz, {{ User[0].username }}</span>
+              <span class="me-2" [hidden]="User[0].rolles!=='ADMIN'" >{{ User[0].rolles |titlecase}}</span>
+              <span>Hoşgeldiniz, {{ User[0].username |titlecase }}</span>
             </a>
             </li>
         </ng-template>

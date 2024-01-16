@@ -3,15 +3,14 @@
     <!-- About start -->
     <section id="about_me_id">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-        repellat deserunt iure fuga recusandae error, quos amet, voluptatum
-        sequi.
+       
       </p>
     </section>
     <!-- About start -->
 
     <!-- Blog start -->
     <section id="blog_id">
+      <h2 class="text-center display-4 text-primary mb-4 mb-4">blog</h2>
       <!-- 
         ngIf = expression ? then : else;
         Eğer blogCard true ise blog çalışsın yoksa noBlogCard çalışsın 
@@ -20,6 +19,7 @@
         !BlogCard: yoksa 
     -->
       <!-- Blog Card Start -->
+
       <ng-container *ngIf="blogCard; then blog; else noBlogCard">
       </ng-container>
 
