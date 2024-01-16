@@ -15,15 +15,14 @@
       <!-- 
         ngIf = expression ? then : else;
         Eğer blogCard true ise blog çalışsın yoksa noBlogCard çalışsın 
-      -->
-
-      <!-- 
+      
         BlogCard: varsa 
-      !BlogCard: yoksa 
+        !BlogCard: yoksa 
     -->
+      <!-- Blog Card Start -->
       <ng-container *ngIf="blogCard; then blog; else noBlogCard">
       </ng-container>
-      <!-- Blog Card Start -->
+
       <ng-template #blog>
         <div class="container">
           <div class="row">
