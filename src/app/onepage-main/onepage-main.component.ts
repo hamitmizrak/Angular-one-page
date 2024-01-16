@@ -27,9 +27,10 @@ import { OnePageContent } from './OnePageContent';
 export class OnepageMainComponent {
   // Field
   onePageContent:OnePageContent[]=[
-    {id:1,title:"about"},
-    {id:2,title:"blog"},
-    {id:3,title:"contact"},
+    {id:1,title:"my work"},
+    {id:2,title:"about"},
+    {id:3,title:"blog"},
+    {id:4,title:"contact"},
   ];
   
   // 1.YOL

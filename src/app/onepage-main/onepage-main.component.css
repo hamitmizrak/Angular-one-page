@@ -21,3 +21,46 @@ img:hover{
     clear: both;
     display: table;
 }
+
+
+.line-clamp4{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+/* BUSINESS */
+#business_id i{
+font-size: 5rem;
+}
+
+/* ABOUT */
+#about_me_id{
+    background-color: rgb(134, 27, 228);
+    color:white!important;
+    height: 35rem;
+    padding:2rem;
+    background-image: url('../../image/cup-of-coffee-1280537_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#about_me_id p{
+    background-color: black;
+    opacity: 0.8;
+    padding:2rem 1rem;
+    line-height: 1.3;
+}
+
+/* BLOG */
+#blog_id{
+    
+}
+
+/* CONTACT */
+#contact_id{
+    background-color: rgb(134, 27, 228);
+}
