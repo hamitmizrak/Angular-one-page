@@ -1,5 +1,5 @@
-<div id="main_id" class="container-fluid" style="margin-top: 5rem">
-  <main>
+<div id="main_id" class="container container-fluid44" style="margin-top: 5rem">
+  <main> 
     <!-- Business start -->
     <section id="business_id">
       <h2 class="text-center display-4 text-primary mb-4 mb-4">
@@ -7,39 +7,10 @@
       </h2>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-3 col-xl-4 text-center">
-            <i class="fa-solid fa-bolt text-primary"></i>
-            <h4>Frontend</h4>
-            <p class="line-clamp4">Frontend Loremsed nam excepturi at voluptatem, unde, atque sunt expedita fuga recusandae facere provident, illo quibusdam nihil quod culpa deserunt quos a reprehenderit est sequi blanditiis dolorum? Sed!</p>
-          </div>
-          <div class="col-12 col-md-3 col-xl-4 text-center">
-            <i class="fa-solid fa-mug-hot text-danger"></i>
-            <h4>Frontend</h4>
-            <p>Frontend Loremsed nam excepturi at voluptatem, unde, atque sunt expedita fuga recusandae facere provident, illo quibusdam nihil quod culpa deserunt quos a reprehenderit est sequi blanditiis dolorum? Sed!</p>
-          </div>
-
-          <div class="col-12 col-md-3 col-xl-4 text-center">
-            <i class="fa-solid fa-pencil"></i>
-            <h4>Frontend</h4>
-            <p>Frontend Loremsed nam excepturi at voluptatem, unde, atque sunt expedita fuga recusandae facere provident, illo quibusdam nihil quod culpa deserunt quos a reprehenderit est sequi blanditiis dolorum? Sed!</p>
-          </div>
-
-          <div class="col-12 col-md-3 col-xl-4 text-center">
-            <i class="fa-solid fa-pencil"></i>
-            <h4>Frontend</h4>
-            <p>Frontend Loremsed nam excepturi at voluptatem, unde, atque sunt expedita fuga recusandae facere provident, illo quibusdam nihil quod culpa deserunt quos a reprehenderit est sequi blanditiis dolorum? Sed!</p>
-          </div>
-
-          <div class="col-12 col-md-3 col-xl-4 text-center">
-            <i class="fa-solid fa-pencil"></i>
-            <h4>Frontend</h4>
-            <p>Frontend Loremsed nam excepturi at voluptatem, unde, atque sunt expedita fuga recusandae facere provident, illo quibusdam nihil quod culpa deserunt quos a reprehenderit est sequi blanditiis dolorum? Sed!</p>
-          </div>
-
-          <div class="col-12 col-md-3 col-xl-4 text-center">
-            <i class="fa-solid fa-pencil"></i>
-            <h4>Frontend</h4>
-            <p>Frontend Loremsed nam excepturi at voluptatem, unde, atque sunt expedita fuga recusandae facere provident, illo quibusdam nihil quod culpa deserunt quos a reprehenderit est sequi blanditiis dolorum? Sed!</p>
+          <div *ngFor="let temp of businessCard" class="col-12 col-md-3 col-xl-4 text-center shadow-sm ">
+            <i [class]="temp.icon"></i>
+            <h4 class="display-6 mt-2 mb-2">{{temp.title | titlecase}}</h4>
+            <p class="line-clamp4">{{temp.text}}</p>
           </div>
         </div>
       </div>
@@ -90,17 +61,17 @@
               *ngFor="let temp of blogCard"
               class="col-sm-12 col-md-3 col-lg-4"
             >
-              <a [href]="temp.link">
+              <a [href]="temp.link"> </a>
                 <div class="card mb-3">
                   <img class="card-img-top" [src]="temp.picture" alt="Title" />
                   <div class="card-body">
                     <h4 class="card-title">{{ temp.id }}</h4>
-                    <p class="card-text">{{ temp.title }}</p>
-                    <p class="card-text">{{ temp.description }}</p>
-                    <span class="text-muted float-end">{{ temp.date }}</span>
+                    <p class="card-text">{{ temp.text }}</p>
+                    <p class="card-text line-clamp8">{{ temp.description }}</p>
+                    <span class="text-muted float-end">{{ temp.date | date:'fullDate' }}</span>
                   </div>
                 </div>
-              </a>
+             
             </div>
 
             <!-- Hidden -->
