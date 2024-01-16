@@ -25,7 +25,9 @@ import { BlogCard } from './BlogCard';
 })
 export class OnepageMainComponent {
   // Field
-  isLoggedIn = true;
+  // navbar başlıklarını objeye ekliyoruz.
+  onePageTitle:{}={};
+
 
   // 1.YOL
   // blogCard: any[] = [
