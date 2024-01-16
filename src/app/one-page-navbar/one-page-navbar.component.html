@@ -62,7 +62,9 @@
         <ng-template #loggedInd>
           <li class="nav-item">
             <a class="nav-link" href="{#">
-              {{ User[0].rolles }}     Hoşgeldiniz, {{ User[0].username }}
+              <!-- Hidden: Eğer rollerinde ADMIN değilse gösterme -->
+              <span [hidden]="User[0].rolles!=='ADMIN'" >{{ User[0].rolles}}</span>
+              <span>Hoşgeldiniz, {{ User[0].username }}</span>
             </a>
             </li>
         </ng-template>
