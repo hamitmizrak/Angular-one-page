@@ -1,3 +1,4 @@
+
 // Common Module
 import { CommonModule } from '@angular/common';
 
@@ -8,6 +9,9 @@ import { Component } from '@angular/core';
 import { BlogCard } from './BlogCard';
 import { OnePageContent } from './OnePageContent';
 import { BusinessCard } from './BusinessCard';
+
+// Declare
+declare let alertify:any;
 
 @Component({
   // html Template
@@ -36,7 +40,6 @@ export class OnepageMainComponent {
     {id:4,title:"contact"},
   ];
 
-  
   // My Work
   businessCard: BusinessCard[] = [
     {
@@ -94,7 +97,21 @@ export class OnepageMainComponent {
       link: 'https://deneme1/',
     },
   ]
-  
+// My Work Link
+  businessLink(temp:any){
+    // if(window.confirm("Gitmek istiyor musunuz")){
+    //   window.location.href="https://www.google.com";
+    // }else{
+    //   alert("Gitmek istemediniz");
+    // }
+    // alert(temp.id)
+
+    // Alertifyjs 
+    //alertify.success("Success")
+    alertify.success("deneme")
+    alertify.warning("deneme")
+  }
+
   // 1.YOL
   // blogCard: any[] = [
   // 2.YOL (Mock Api)
@@ -161,8 +178,5 @@ export class OnepageMainComponent {
         link: 'https://deneme6/',
       },
   ];
-
-  //Constructor
-
   //Method
 }

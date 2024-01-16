@@ -1,5 +1,8 @@
 <div id="main_id" class="container container-fluid44" style="margin-top: 5rem">
   <main> 
+
+
+
     <!-- Business start -->
     <section id="business_id">
       <h2 class="text-center display-4 text-primary mb-4 mb-4">
@@ -8,9 +11,12 @@
       <div class="container">
         <div class="row">
           <div *ngFor="let temp of businessCard" class="col-12 col-md-3 col-xl-4 text-center shadow-sm ">
+            <!-- (dblclick) -->
+            <a (click)="businessLink(temp)" style="cursor: pointer;">
             <i [class]="temp.icon"></i>
             <h4 class="display-6 mt-2 mb-2">{{temp.title | titlecase}}</h4>
             <p class="line-clamp4">{{temp.text}}</p>
+          </a>
           </div>
         </div>
       </div>

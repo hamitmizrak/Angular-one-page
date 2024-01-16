@@ -1,6 +1,7 @@
 import { User, userRolles } from './User';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // Component
 @Component({
@@ -11,7 +12,7 @@ import { Component } from '@angular/core';
   standalone: true,
 
   // Projeye import edilecek alan
-  imports: [CommonModule],
+  imports: [CommonModule, NgbModule],
 
   // Html Template
   templateUrl: './one-page-navbar.component.html',

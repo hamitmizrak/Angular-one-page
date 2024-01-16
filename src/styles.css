@@ -1,9 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Bootstrap Ekle */
+/* Bootstrap CSS => Ekle */
+/* Bootstrap JS => angular.json => script */
 /* @import "~/bootstrap/dist/css/bootstrap.min.css"*/
-@import "bootstrap/dist/css/bootstrap.min.css";
+/* @import "bootstrap/dist/css/bootstrap.min.css"; */
 
 /* Font awesome */
 /* @import "~/font-awesome/css/font-awesome.min.css"*/
 @import "font-awesome/css/font-awesome.min.css";
+
+@import "alertifyjs/build/css/alertify.min.css";
+@import "alertifyjs/build/css/themes/bootstrap.min.css";

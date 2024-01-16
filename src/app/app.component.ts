@@ -21,7 +21,6 @@ import { OnePageNavbarComponent } from './one-page-navbar/one-page-navbar.compon
   imports: [
     CommonModule, 
     RouterOutlet, 
-    OnepageProjectNameComponent,
     OnepageHeaderComponent, 
     OnepageMainComponent, 
     OnepageFooterComponent,
