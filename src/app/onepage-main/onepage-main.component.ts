@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 
 // BlogCard Ekledim
 import { BlogCard } from './BlogCard';
+import { OnePageContent } from './OnePageContent';
 
 @Component({
   // html Template
@@ -25,10 +26,12 @@ import { BlogCard } from './BlogCard';
 })
 export class OnepageMainComponent {
   // Field
-  // navbar başlıklarını objeye ekliyoruz.
-  onePageTitle:{}={};
-
-
+  onePageContent:OnePageContent[]=[
+    {id:1,title:"about"},
+    {id:2,title:"blog"},
+    {id:3,title:"contact"},
+  ];
+  
   // 1.YOL
   // blogCard: any[] = [
 

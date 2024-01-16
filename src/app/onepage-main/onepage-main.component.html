@@ -2,6 +2,7 @@
   <main>
     <!-- About start -->
     <section id="about_me_id">
+      <h2 class="text-center display-4 text-primary mb-4 mb-4">{{onePageContent[0].title | uppercase}}</h2>
       <p>
        
       </p>
@@ -10,7 +11,7 @@
 
     <!-- Blog start -->
     <section id="blog_id">
-      <h2 class="text-center display-4 text-primary mb-4 mb-4">blog</h2>
+      <h2 class="text-center display-4 text-primary mb-4 mb-4">{{onePageContent[1].title | uppercase}}</h2>
       <!-- 
         ngIf = expression ? then : else;
         Eğer blogCard true ise blog çalışsın yoksa noBlogCard çalışsın 
@@ -94,13 +95,14 @@
                 Deneme44
           </div> 
       -->
-
       <!--end container -->
     </section>
     <!-- Blog start -->
 
     <!-- Contact start -->
-    <section id="contact_id"></section>
+    <section id="contact_id">
+      <h2 class="text-center display-4 text-primary mb-4 mb-4">{{onePageContent[2].title | uppercase}}</h2>
+    </section>
     <!-- Contact start -->
   </main>
 </div>
