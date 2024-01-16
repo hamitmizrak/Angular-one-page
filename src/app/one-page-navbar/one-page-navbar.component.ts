@@ -1,15 +1,21 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-one-page-navbar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './one-page-navbar.component.html',
-  styleUrl: './one-page-navbar.component.css'
+  styleUrl: './one-page-navbar.component.css',
 })
 export class OnePageNavbarComponent {
   // Field
   homePage: String = 'Anasayfa 44';
+
+  // user objemiz olsun ve türü User classında ;
+  // username, email,password bilgileri yer alsın
+  // username:HamitM., email:hamitmizrak@gmail.com ,password: 123456 bilgileri yer alsın
+  username: String = 'Hamit Mizrak';
 
   // navBar adında bir obje oluşturunuz.
   // Logo(string), link(string), search, attribute oluşturuyorsunuz.
@@ -30,10 +36,10 @@ export class OnePageNavbarComponent {
       name: string;
       placeholder: string;
       type: string;
-      style:string;
+      style: string;
     };
   } = {
-    isLogin: true,
+    isLogin: false,
     logo: {
       logoName: 'Logo',
       logoFontAwesome: 'fa-solid fa-code-branch',
@@ -58,11 +64,9 @@ export class OnePageNavbarComponent {
       name: 'Search',
       placeholder: 'Arama için ...',
       type: 'text',
-      style:'btn btn-primary'
+      style: 'btn btn-primary',
     },
   }; //navBar Object
   //Constructor
   // Method
-
-
 }

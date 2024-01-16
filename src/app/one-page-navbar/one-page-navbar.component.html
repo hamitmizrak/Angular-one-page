@@ -1,88 +1,99 @@
-<nav id="navbar_id" class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
-    <div class="container">
-      <!-- <a class="navbar-brand" href="#">{{navBar.logo.logoName}}</a> -->
-  
-      <a class="navbar-brand" href="#">
-        <!-- {{navBar.logo.logoName}} -->
-        <!-- <img class="rounded-circle w-25" [src]="navBar.logo.logoPicture" alt=""> -->
-        <i [class]="navBar.logo.logoFontAwesome"></i>
-      </a>
-      <button
-        class="navbar-toggler d-lg-none"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+<nav
+  id="navbar_id"
+  class="navbar navbar-expand-md fixed-top navbar-dark bg-dark"
+>
+  <div class="container">
+    <!-- <a class="navbar-brand" href="#">{{navBar.logo.logoName}}</a> -->
+
+    <a class="navbar-brand" href="#">
+      <!-- {{navBar.logo.logoName}} -->
+      <!-- <img class="rounded-circle w-25" [src]="navBar.logo.logoPicture" alt=""> -->
+      <i [class]="navBar.logo.logoFontAwesome"></i>
+    </a>
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            href="{{ navBar.navbar[0].link }}"
+            aria-current="page"
+          >
+            <!-- {{homePage}} -->
+            <!-- {{navBar.navbar[0].name}}  -->
+            <!-- Property Binding Yapalım -->
+            <!-- <i class={{navBar.navbar[0].fontAwesome}}></i>  -->
+            <i [class]="navBar.navbar[0].fontAwesome"></i>
+            <span class="visually-hidden">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ navBar.navbar[1].link }}">
+            {{ navBar.navbar[1].name }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ navBar.navbar[2].link }}">
+            {{ navBar.navbar[2].name }}
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ navBar.navbar[3].link }}">
+            {{ navBar.navbar[3].name }}
+          </a>
+        </li>
+
+        <!-- Eğer kullanıcı sisteme giriş yapmışsa Login/Register Görünmesin -->
+        <ng-container *ngIf="navBar.isLogin; then loggedInd; else loggedOut">
+        </ng-container>
+
+        <!-- Eğer login:true ise Kullanıcı bigileri -->
+        <ng-template #loggedInd>
           <li class="nav-item">
+            <a class="nav-link" href="{#">
+              Hoşgeldiniz, {{ username }}
+            </a>
+            </li>
+        </ng-template>
+
+        <!-- Eğer login:false ise login/register görünsün -->
+        <ng-template #loggedOut>
+          <li class="nav-item dropdown">
             <a
-              class="nav-link active"
-              href="{{ navBar.navbar[0].link }}"
-              aria-current="page"
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Login</a
             >
-              <!-- {{homePage}} -->
-              <!-- {{navBar.navbar[0].name}}  -->
-              <!-- Property Binding Yapalım -->
-              <!-- <i class={{navBar.navbar[0].fontAwesome}}></i>  -->
-              <i [class]="navBar.navbar[0].fontAwesome"></i>
-              <span class="visually-hidden">(current)</span></a
-            >
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Login</a>
+              <a class="dropdown-item" href="#">Register</a>
+            </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ navBar.navbar[1].link }}">
-              {{ navBar.navbar[1].name }}
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ navBar.navbar[2].link }}">
-              {{ navBar.navbar[2].name }}
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ navBar.navbar[3].link }}">
-              {{ navBar.navbar[3].name }}
-            </a>
-          </li>
-          <!-- <li class="nav-item dropdown">
-                      <a
-                          class="nav-link dropdown-toggle"
-                          href="#"
-                          id="dropdownId"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                          >Dropdown</a
-                      >
-                      <div
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownId"
-                      >
-                          <a class="dropdown-item" href="#"
-                              >Action 1</a
-                          >
-                          <a class="dropdown-item" href="#"
-                              >Action 2</a
-                          >
-                      </div>
-                  </li> -->
-        </ul>
-        <form class="d-flex my-2 my-lg-0">
-          <input
-            class="form-control me-sm-2"
-            type="text"
-            [placeholder]="navBar.search.placeholder"
-          />
-          <button [class]="navBar.search.style" type="submit">Search</button>
-        </form>
-      </div>
+        </ng-template>
+      </ul>
+      <form class="d-flex my-2 my-lg-0">
+        <input
+          class="form-control me-sm-2"
+          type="text"
+          [placeholder]="navBar.search.placeholder"
+        />
+        <button [class]="navBar.search.style" type="submit">Search</button>
+      </form>
     </div>
-  </nav>
-
-
-  
+  </div>
+</nav>
