@@ -1,3 +1,4 @@
+import { User } from './User';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
@@ -15,7 +16,45 @@ export class OnePageNavbarComponent {
   // user objemiz olsun ve türü User classında ;
   // username, email,password bilgileri yer alsın
   // username:HamitM., email:hamitmizrak@gmail.com ,password: 123456 bilgileri yer alsın
-  username: String = 'Hamit Mizrak';
+  // username: String = 'Hamit Mizrak';
+  /*
+    id:number;
+    username:string;
+    email:string;
+    passwords:string;
+    pictures:string;
+    date:string;
+    link:string;
+  */
+ User: User[]=[
+  {
+    id:1,
+    username:'Hamit Mizrak',
+    email:'hamitmizrak@gmail.com',
+    password:'123456',
+    pictures:'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
+    date:String(new Date().getFullYear()),
+    link:'https://admin1/',
+  },
+  {
+    id:2,
+    username:'writer1',
+    email:'writer1@gmail.com',
+    password:'123456',
+    pictures:'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
+    date:String(new Date().getFullYear()),
+    link:'https://writer1/',
+  },
+  {
+    id:3,
+    username:'user1',
+    email:'huser1@gmail.com',
+    password:'123456',
+    pictures:'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
+    date:String(new Date().getFullYear()),
+    link:'https://user1/',
+  }
+ ];
 
   // navBar adında bir obje oluşturunuz.
   // Logo(string), link(string), search, attribute oluşturuyorsunuz.
@@ -39,7 +78,7 @@ export class OnePageNavbarComponent {
       style: string;
     };
   } = {
-    isLogin: false,
+    isLogin: true,
     logo: {
       logoName: 'Logo',
       logoFontAwesome: 'fa-solid fa-code-branch',

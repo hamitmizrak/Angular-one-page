@@ -20,6 +20,7 @@ import { Component } from '@angular/core';
 })
 export class OnepageHeaderComponent {
   // Field
-  //Constructor
-  //Method
+  // Constructor
+  // Method
+
 } //end OnepageHeaderComponent
