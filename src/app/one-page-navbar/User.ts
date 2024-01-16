@@ -1,6 +1,13 @@
-// User
-export class User {
-  // Field
+// ENUM
+export enum userRolles {
+  admin = 'ADMIN',
+  writer = 'WRITER',
+  user = 'USER',
+}
+
+// ABSTRACT
+abstract class Person {
+  //Field
   id: number;
   username: string;
   email: string;
@@ -8,9 +15,8 @@ export class User {
   pictures: string;
   date: string;
   link: string;
-  //rolles:Dizi
 
-  // Constructor
+  //Constructor
   constructor(
     id: number,
     username: string,
@@ -28,10 +34,38 @@ export class User {
     this.date = date;
     this.link = link;
   }
+
+  //Method (Gövdeli)
+//   personInformation():void{
+//     console.log("Gövdeli method");
+//   }
+  //Method (Gövdesiz)
+} //end abstract
+
+// INTERFACE
+
+// User
+export class User extends Person {
+  // Field
+  // rolles:Array<any>;
+  rolles: string;
+
+  // Constructor
+  constructor(
+    id: number,
+    username: string,
+    email: string,
+    password: string,
+    pictures: string,
+    date: string,
+    link: string,
+    rolles: string
+  ) {
+    super(id,username,email,password,pictures,date,link); // abstract'ten gelen
+    this.rolles = rolles;
+  }
   // Method
 }
 
-// rolles: Enum (admin,writer,user)
-// rolles: Dizi
 // Person nesnesinden abstract
-
+// TypeScript Enum

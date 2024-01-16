@@ -5,44 +5,6 @@
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
         repellat deserunt iure fuga recusandae error, quos amet, voluptatum
-        voluptates quasi cumque libero, modi pariatur magnam excepturi id
-        facilis deleniti neque. Vitae alias, ullam error excepturi beatae
-        consequuntur ad saepe magni impedit nemo officia eaque voluptatum quod
-        obcaecati laborum reiciendis quo nostrum. Dicta doloremque veritatis
-        perspiciatis velit iure ad porro corporis. Doloremque illum et possimus
-        nihil nobis. Voluptatem ab at beatae doloremque aperiam voluptatibus
-        minima ipsum, saepe adipisci officiis expedita accusamus similique
-        repellat ea dolore voluptatum commodi, et corporis! Totam, itaque!
-        Tenetur minus perferendis totam fugiat aliquam eligendi distinctio
-        expedita optio tempora at vitae, soluta delectus autem dolor eveniet
-        iure perspiciatis reprehenderit culpa doloribus officiis voluptatum, eos
-        cumque qui architecto. Hic. Possimus laborum similique ut architecto
-        veritatis quos assumenda, totam magni maxime consequuntur ipsa facilis,
-        alias quasi exercitationem sunt animi nihil illum numquam? Natus, ipsam
-        ut unde saepe optio itaque debitis! Voluptas minus cumque laborum
-        accusantium iusto at incidunt eos nesciunt consequatur officia dolores
-        sunt fugiat laudantium, architecto praesentium. Consequatur atque
-        voluptatem tempora officiis earum neque reiciendis delectus ipsum
-        eligendi aut! Laudantium at accusantium eius officia unde nam iure
-        repellat dolorem amet ducimus dolore optio porro placeat natus, aut
-        sapiente facere voluptatibus animi minima doloremque ratione in
-        molestias aperiam. Pariatur, quaerat! Deserunt repellat hic quis libero
-        sunt ad veniam, doloremque, aspernatur consequatur obcaecati iusto odio
-        rem accusamus voluptatem quidem tenetur non dolorem laudantium nam magni
-        aperiam. Delectus ex corrupti doloremque! Fuga. Similique at laborum
-        ducimus cupiditate iusto rem deleniti voluptatibus quod veritatis,
-        excepturi fugit porro autem nesciunt totam eum quae voluptatem
-        doloribus, tempore, adipisci nobis nihil? Aperiam consequuntur dolores
-        nisi dicta. Quam explicabo cupiditate, commodi doloremque aliquam
-        dolores iure sit, doloribus sunt aliquid nihil facilis ut quibusdam
-        deleniti quasi culpa placeat architecto harum maiores tempora ducimus
-        itaque eveniet cumque quas! Ex? Possimus, consectetur esse, a tempora
-        nihil placeat hic illo animi autem at odit itaque quo vero praesentium
-        assumenda, impedit blanditiis deleniti inventore ea laboriosam.
-        Incidunt, possimus quo! Ullam, explicabo reiciendis. Eos rerum incidunt
-        expedita eveniet aliquid tempore deleniti ratione. Magni, nesciunt ea?
-        Nemo perspiciatis ratione eius nobis architecto tempora explicabo earum.
-        Veritatis, dolore? Facilis suscipit soluta porro inventore? Quidem,
         sequi.
       </p>
     </section>
@@ -50,30 +12,71 @@
 
     <!-- Blog start -->
     <section id="blog_id">
-      <div class="container">
-        <div class="row">
+      <!-- 
+        ngIf = expression ? then : else;
+        Eğer blogCard true ise blog çalışsın yoksa noBlogCard çalışsın 
+      -->
 
+      <ng-container *ngIf="blogCard; then blog; else noBlogCard">
+      </ng-container>
+
+      <!-- 1.Template -->
+      <ng-template #blog class="container">
+        <div class="row">
           <!-- card -->
-          <div *ngFor="let temp of blogCard" class="col-sm-12 col-md-3 col-lg-4">
+          <div
+            *ngFor="let temp of blogCard"
+            class="col-sm-12 col-md-3 col-lg-4"
+          >
             <a [href]="temp.link">
-            <div class="card mb-3">
-              <img
-                class="card-img-top"
-                [src]="temp.picture"
-                alt="Title"
-              />
-              <div class="card-body">
-                <h4 class="card-title">{{temp.id}}</h4>
-                <p class="card-text">{{temp.title}}</p>
-                <p class="card-text">{{temp.description}}</p>
-                <span class="text-muted float-end">{{temp.date}}</span>
+              <div class="card mb-3">
+                <img class="card-img-top" [src]="temp.picture" alt="Title" />
+                <div class="card-body">
+                  <h4 class="card-title">{{ temp.id }}</h4>
+                  <p class="card-text">{{ temp.title }}</p>
+                  <p class="card-text">{{ temp.description }}</p>
+                  <span class="text-muted float-end">{{ temp.date }}</span>
+                </div>
               </div>
-            </div>
-         </a>
-          </div> <!--end card -->
+            </a>
+          </div>
+
+          <!-- Hidden -->
+          <!-- 
+        [hidden]=false ise çalışır.
+      -->
+          <div [hidden]="!(blogCard.length >= 6)">
+            6 tane üründen fazla var.
+          </div>
+          <!--end card -->
         </div>
         <!--end row -->
-      </div>
+      </ng-template>
+
+      <!-- 2.Template -->
+      <ng-template #noBlogCard>
+        <div class="alert alert-primary">Blog Yoktur.</div>
+      </ng-template>
+
+
+      <!-- 
+        ngSwitch 
+        <ng-container [ngSwitch]="true">
+        <div *ngSwitchCase="false">First</div>
+        <div *ngSwitchCase="true">Second</div>
+        <div *ngSwitchDefault>Third</div>
+      </ng-container> -->
+
+      
+      <!--    
+        Hidden   
+        <div [hidden]="false">  
+          Eğer false ise çalışır.
+                Deneme44
+          </div> 
+      -->
+        
+
       <!--end container -->
     </section>
     <!-- Blog start -->
@@ -83,6 +86,3 @@
     <!-- Contact start -->
   </main>
 </div>
-
-
-

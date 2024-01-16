@@ -1,4 +1,4 @@
-import { User } from './User';
+import { User, userRolles } from './User';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
@@ -35,6 +35,7 @@ export class OnePageNavbarComponent {
     pictures:'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
     date:String(new Date().getFullYear()),
     link:'https://admin1/',
+    rolles:userRolles.admin,
   },
   {
     id:2,
@@ -44,6 +45,7 @@ export class OnePageNavbarComponent {
     pictures:'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
     date:String(new Date().getFullYear()),
     link:'https://writer1/',
+    rolles:userRolles.writer,
   },
   {
     id:3,
@@ -53,6 +55,7 @@ export class OnePageNavbarComponent {
     pictures:'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
     date:String(new Date().getFullYear()),
     link:'https://user1/',
+    rolles:userRolles.user,
   }
  ];
 

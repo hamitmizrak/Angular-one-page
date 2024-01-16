@@ -21,6 +21,4 @@ export class OnepageFooterComponent {
     return String(new Date().getFullYear()) ;
   }
 
-
-
 }
