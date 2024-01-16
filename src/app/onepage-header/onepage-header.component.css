@@ -1,5 +1,11 @@
 #header_id{
-    margin-top: 5rem;
+    margin-top: 3.5rem;
+    background-image: url('../../image/cup-of-coffee-1280537_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    z-index: -1;
+    padding-top: 20rem;
 }
 
 #back_to_top_id{
