@@ -1,7 +1,7 @@
 import { User, userRolles } from './User';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterLink } from '@angular/router';
 
 // Component
 @Component({
@@ -12,7 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   standalone: true,
 
   // Projeye import edilecek alan
-  imports: [CommonModule, NgbModule],
+  imports: [CommonModule,RouterLink],
 
   // Html Template
   templateUrl: './one-page-navbar.component.html',

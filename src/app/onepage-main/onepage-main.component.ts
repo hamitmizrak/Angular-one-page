@@ -110,6 +110,8 @@ export class OnepageMainComponent {
     //alertify.success("Success")
     alertify.success("deneme")
     alertify.warning("deneme")
+    alertify.message("deneme")
+    alertify.error("deneme")
   }
 
   // 1.YOL

@@ -1,6 +1,9 @@
 // import
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+// Declare 
+declare var alertify:any;
 
 @Component({
   // html
@@ -18,9 +21,19 @@ import { Component } from '@angular/core';
   // Css3 Url
   styleUrl: './onepage-header.component.css',
 })
-export class OnepageHeaderComponent {
+export class OnepageHeaderComponent implements OnInit  {
   // Field
   // Constructor
+  constructor(){
+    console.log("Header Constructor");
+  }
+
+  // Sayfanın hazırlanmasında kullanılır.
+  ngOnInit(): void{
+    console.log("Header ngOnInit");
+    // alert("deneme")
+    alertify.success("Hoş geldiniz, Gününüz nasıl geçiyor");
+  }
   // Method
 
 } //end OnepageHeaderComponent

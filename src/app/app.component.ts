@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+
+// Router
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 // Header, Main, Footer
 import { OnepageHeaderComponent } from './onepage-header/onepage-header.component';
 import { OnepageMainComponent } from './onepage-main/onepage-main.component';
 import { OnepageFooterComponent } from './onepage-footer/onepage-footer.component';
-import { OnepageProjectNameComponent } from './onepage-project-name/onepage-project-name.component';
+//import { OnepageProjectNameComponent } from './onepage-project-name/onepage-project-name.component';
 import { OnePageNavbarComponent } from './one-page-navbar/one-page-navbar.component';
+import { OnInit } from '@angular/core';
+import { LoginComponent } from './login/login.component';
+import { AboutComponent } from './about/about.component';
+
+declare let $: any; //jquery
+declare let jQuery: any;
+
 
 // Dikkat: Bütün Componentleri buraya eklemek zorundayız
 @Component({
@@ -21,10 +30,13 @@ import { OnePageNavbarComponent } from './one-page-navbar/one-page-navbar.compon
   imports: [
     CommonModule, 
     RouterOutlet, 
+    RouterLink,
     OnepageHeaderComponent, 
     OnepageMainComponent, 
     OnepageFooterComponent,
     OnePageNavbarComponent,
+    LoginComponent,
+    AboutComponent
   ],
 
   // Html'de bu componentte kullanacağımız html dosyası
@@ -36,9 +48,14 @@ import { OnePageNavbarComponent } from './one-page-navbar/one-page-navbar.compon
 })
 
 // EXPORT: bu classı dışarda çağırmak istiyorsak
-export class AppComponent {
+export class AppComponent implements OnInit {
   // TS(TypeScript kodlarını buraya yazabiliriz)
   name="Hamit";
   surname="Mızrak";
   projectName = 'One Page';
+
+  ngOnInit():void{
+   
+    }
+    
 }
