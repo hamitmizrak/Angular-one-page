@@ -17,47 +17,68 @@
         Eğer blogCard true ise blog çalışsın yoksa noBlogCard çalışsın 
       -->
 
+      <!-- 
+        BlogCard: varsa 
+      !BlogCard: yoksa 
+    -->
       <ng-container *ngIf="blogCard; then blog; else noBlogCard">
       </ng-container>
-
-      <!-- 1.Template -->
-      <ng-template #blog class="container">
-        <div class="row">
-          <!-- card -->
-          <div
-            *ngFor="let temp of blogCard"
-            class="col-sm-12 col-md-3 col-lg-4"
-          >
-            <a [href]="temp.link">
-              <div class="card mb-3">
-                <img class="card-img-top" [src]="temp.picture" alt="Title" />
-                <div class="card-body">
-                  <h4 class="card-title">{{ temp.id }}</h4>
-                  <p class="card-text">{{ temp.title }}</p>
-                  <p class="card-text">{{ temp.description }}</p>
-                  <span class="text-muted float-end">{{ temp.date }}</span>
+      <!-- Blog Card Start -->
+      <ng-template #blog>
+        <div class="container">
+          <div class="row">
+            <!-- card -->
+            <div
+              *ngFor="let temp of blogCard"
+              class="col-sm-12 col-md-3 col-lg-4"
+            >
+              <a [href]="temp.link">
+                <div class="card mb-3">
+                  <img class="card-img-top" [src]="temp.picture" alt="Title" />
+                  <div class="card-body">
+                    <h4 class="card-title">{{ temp.id }}</h4>
+                    <p class="card-text">{{ temp.title }}</p>
+                    <p class="card-text">{{ temp.description }}</p>
+                    <span class="text-muted float-end">{{ temp.date }}</span>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
+              </a>
+            </div>
 
-          <!-- Hidden -->
-          <!-- 
+            <!-- Hidden -->
+            <!-- 
         [hidden]=false ise çalışır.
       -->
-          <div [hidden]="!(blogCard.length >= 6)">
-            6 tane üründen fazla var.
+            <div [hidden]="!(blogCard.length >= 6)">
+              6 tane üründen fazla var.
+            </div>
+            <!--end card -->
           </div>
-          <!--end card -->
+          <!--end row -->
         </div>
-        <!--end row -->
       </ng-template>
-
-      <!-- 2.Template -->
       <ng-template #noBlogCard>
-        <div class="alert alert-primary">Blog Yoktur.</div>
+        
+        <form action="#">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+                <input
+                  type="text"
+                  title="blog ara"
+                  placeholder="Blog ara"
+                  class="form-control mb-3"
+                />
+              </div>
+              <div class="col-md-2">
+                <button class="btn btn-primary">Ara</button>
+              </div>
+              <div class="alert alert-primary mt-2">Blog Yoktur</div>
+            </div>
+          </div>
+        </form>
       </ng-template>
-
+      <!-- Blog Card End -->
 
       <!-- 
         ngSwitch 
@@ -67,7 +88,6 @@
         <div *ngSwitchDefault>Third</div>
       </ng-container> -->
 
-      
       <!--    
         Hidden   
         <div [hidden]="false">  
@@ -75,7 +95,6 @@
                 Deneme44
           </div> 
       -->
-        
 
       <!--end container -->
     </section>
