@@ -1,3 +1,8 @@
+// ngModel
+import { FormsModule, NgModel } from '@angular/forms';
+
+// Pipeline
+import { BlogFilterPipe } from './blog-filter.pipe';
 
 // Common Module
 import { CommonModule } from '@angular/common';
@@ -10,6 +15,7 @@ import { BlogCard } from './BlogCard';
 import { OnePageContent } from './OnePageContent';
 import { BusinessCard } from './BusinessCard';
 
+
 // Declare
 declare let alertify:any;
 
@@ -21,7 +27,7 @@ declare let alertify:any;
   standalone: true,
 
   // import modülümüz
-  imports: [CommonModule],
+  imports: [CommonModule,BlogFilterPipe,FormsModule],
 
   // Html Url
   templateUrl: './onepage-main.component.html',
@@ -117,9 +123,12 @@ export class OnepageMainComponent {
   // 1.YOL
   // blogCard: any[] = [
   // 2.YOL (Mock Api)
+  // filterData => Custom Pipeline için kullan;
+  filterText="";
   blogCard: BlogCard[] = [
     {
       id: 1,
+      header:"frontend",
       title: 'Blog Frontend Kullanımı',
       text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, incidunt? Magnam quas optio sit expedita pariatur repudiandae recusandae porro cumque delectus laudantium quis, fugiat, deleniti praesentium beatae officia consequatur architecto? Nesciunt reiciendis culpa in sunt laudantium ipsum fugiat non sed asperiores atque eveniet illum, natus provident placeat veniam? Nesciunt reiciendis mollitia iusto ea excepturi quas, minima consequuntur aliquam repudiandae omnis? Dicta, placeat. Placeat, eius alias. Aspernatur eius harum expedita officia molestias explicabo iure, quos earum asperiores velit incidunt nostrum exercitationem nobis perferendis ipsum quidem eaque nam est nemo repellat unde.',
       description: 'Description-1',
@@ -130,6 +139,7 @@ export class OnepageMainComponent {
     },
     {
       id: 2,
+      header:"backend",
       title: 'Blog Backend Kullanımı',
       text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, incidunt? Magnam quas optio sit expedita pariatur repudiandae recusandae porro cumque delectus laudantium quis, fugiat, deleniti praesentium beatae officia consequatur architecto? Nesciunt reiciendis culpa in sunt laudantium ipsum fugiat non sed asperiores atque eveniet illum, natus provident placeat veniam? Nesciunt reiciendis mollitia iusto ea excepturi quas, minima consequuntur aliquam repudiandae omnis? Dicta, placeat. Placeat, eius alias. Aspernatur eius harum expedita officia molestias explicabo iure, quos earum asperiores velit incidunt nostrum exercitationem nobis perferendis ipsum quidem eaque nam est nemo repellat unde.',
       description: 'Description-2',
@@ -141,6 +151,7 @@ export class OnepageMainComponent {
     ,
     {
       id: 3,
+      header:"Database",
       title: 'Blog Database Kullanımı',
       text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, incidunt? Magnam quas optio sit expedita pariatur repudiandae recusandae porro cumque delectus laudantium quis, fugiat, deleniti praesentium beatae officia consequatur architecto? Nesciunt reiciendis culpa in sunt laudantium ipsum fugiat non sed asperiores atque eveniet illum, natus provident placeat veniam? Nesciunt reiciendis mollitia iusto ea excepturi quas, minima consequuntur aliquam repudiandae omnis? Dicta, placeat. Placeat, eius alias. Aspernatur eius harum expedita officia molestias explicabo iure, quos earum asperiores velit incidunt nostrum exercitationem nobis perferendis ipsum quidem eaque nam est nemo repellat unde.',
       description: 'Description-3',
@@ -151,6 +162,7 @@ export class OnepageMainComponent {
       },
     {
       id: 4,
+      header:"Web services",
       title: 'Blog Webservices Kullanımı',
       text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, incidunt? Magnam quas optio sit expedita pariatur repudiandae recusandae porro cumque delectus laudantium quis, fugiat, deleniti praesentium beatae officia consequatur architecto? Nesciunt reiciendis culpa in sunt laudantium ipsum fugiat non sed asperiores atque eveniet illum, natus provident placeat veniam? Nesciunt reiciendis mollitia iusto ea excepturi quas, minima consequuntur aliquam repudiandae omnis? Dicta, placeat. Placeat, eius alias. Aspernatur eius harum expedita officia molestias explicabo iure, quos earum asperiores velit incidunt nostrum exercitationem nobis perferendis ipsum quidem eaque nam est nemo repellat unde.',
       description: 'Description-4',
@@ -161,6 +173,7 @@ export class OnepageMainComponent {
       },
     {
       id: 5,
+      header:"html",
       title: 'Blog Frontend Kullanımı',
       text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, incidunt? Magnam quas optio sit expedita pariatur repudiandae recusandae porro cumque delectus laudantium quis, fugiat, deleniti praesentium beatae officia consequatur architecto? Nesciunt reiciendis culpa in sunt laudantium ipsum fugiat non sed asperiores atque eveniet illum, natus provident placeat veniam? Nesciunt reiciendis mollitia iusto ea excepturi quas, minima consequuntur aliquam repudiandae omnis? Dicta, placeat. Placeat, eius alias. Aspernatur eius harum expedita officia molestias explicabo iure, quos earum asperiores velit incidunt nostrum exercitationem nobis perferendis ipsum quidem eaque nam est nemo repellat unde.',
       description: 'Description-5',
@@ -171,6 +184,7 @@ export class OnepageMainComponent {
       },
     {
       id: 6,
+      header:"html",
       title: 'Blog Frontend Kullanımı',
       text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, incidunt? Magnam quas optio sit expedita pariatur repudiandae recusandae porro cumque delectus laudantium quis, fugiat, deleniti praesentium beatae officia consequatur architecto? Nesciunt reiciendis culpa in sunt laudantium ipsum fugiat non sed asperiores atque eveniet illum, natus provident placeat veniam? Nesciunt reiciendis mollitia iusto ea excepturi quas, minima consequuntur aliquam repudiandae omnis? Dicta, placeat. Placeat, eius alias. Aspernatur eius harum expedita officia molestias explicabo iure, quos earum asperiores velit incidunt nostrum exercitationem nobis perferendis ipsum quidem eaque nam est nemo repellat unde.',
       description: 'Description-6',

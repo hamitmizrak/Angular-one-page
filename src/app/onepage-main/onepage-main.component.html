@@ -1,8 +1,5 @@
 <div id="main_id" class="container container-fluid44" style="margin-top: 5rem">
-  <main> 
-
-
-
+  <main>
     <!-- Business start -->
     <section id="business_id">
       <h2 class="text-center display-4 text-primary mb-4 mb-4">
@@ -10,13 +7,16 @@
       </h2>
       <div class="container">
         <div class="row">
-          <div *ngFor="let temp of businessCard" class="col-12 col-md-3 col-xl-4 text-center shadow-sm ">
+          <div
+            *ngFor="let temp of businessCard"
+            class="col-12 col-md-3 col-xl-4 text-center shadow-sm"
+          >
             <!-- (dblclick) -->
-            <a (click)="businessLink(temp)" style="cursor: pointer;">
-            <i [class]="temp.icon"></i>
-            <h4 class="display-6 mt-2 mb-2">{{temp.title | titlecase}}</h4>
-            <p class="line-clamp4">{{temp.text}}</p>
-          </a>
+            <a (click)="businessLink(temp)" style="cursor: pointer">
+              <i [class]="temp.icon"></i>
+              <h4 class="display-6 mt-2 mb-2">{{ temp.title | titlecase }}</h4>
+              <p class="line-clamp4">{{ temp.text }}</p>
+            </a>
           </div>
         </div>
       </div>
@@ -25,20 +25,46 @@
 
     <!-- About start -->
     <section id="about_me_id">
-      <h2 class="text-center display-4  mb-4 mb-4">
+      <h2 class="text-center display-4 mb-4 mb-4">
         {{ onePageContent[1].title | uppercase }}
       </h2>
-      <p><span style="font-size: 2rem;">H</span>akkımızda Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti esse magnam est vel natus maxime nemo voluptate doloribus error, inventore, et incidunt sapiente facere odio quis neque fugit at voluptates!
-      Fugiat sapiente exercitationem distinctio consequuntur deleniti delectus! Velit earum optio laudantium amet alias consequatur non ullam omnis. Nulla atque, debitis, placeat sunt totam facilis odit excepturi tempora in repellendus alias.
-      Eligendi impedit itaque quis dolores tenetur nemo, architecto nulla nesciunt facilis error possimus! Porro perferendis quidem quia enim aut autem iure quam eveniet minima facilis praesentium, molestiae et veritatis sunt.
-      Voluptatibus, sequi! Tempora aut adipisci debitis ex maxime corporis architecto, numquam reprehenderit ab quidem quae porro. Tempora nam aliquid blanditiis natus iste, amet consequuntur at impedit eligendi, numquam itaque vero?
-      Enim veritatis perferendis ipsa sunt veniam in autem quae aspernatur iste aliquid laborum qui, unde suscipit assumenda maxime commodi, molestiae libero quaerat explicabo ea at asperiores officiis. Officia, perferendis ipsum.
-      Beatae dolorum asperiores magnam soluta tempore nulla veritatis minus ipsa aperiam explicabo id voluptate commodi fugit, quam dignissimos at debitis neque ut officia. Cumque voluptate atque voluptatum ipsam explicabo non?
-      Quis eaque fugiat nesciunt. Perspiciatis quos mollitia eum exercitationem dolores quibusdam! Fugit sapiente soluta exercitationem similique deleniti sit praesentium unde optio! Accusantium natus porro quo eius molestias eum doloremque in!
-      Assumenda iste temporibus modi ab delectus quas quasi dolorem in quos. Distinctio accusamus at quaerat possimus omnis totam corporis, fugiat nostrum facere. Odio, perferendis asperiores pariatur ipsa eligendi illo sapiente.
-      Esse, quidem quaerat animi quae cum asperiores iste aut rem minima numquam error vitae vero voluptatem officia culpa exercitationem? Dolore asperiores quam repudiandae, iure molestiae nesciunt laboriosam facere voluptates animi.
-      Ipsam nemo voluptates magni numquam nostrum veniam officia, at voluptas consequatur? Magni, inventore commodi ipsa repellendus est tenetur, laboriosam numquam iure id soluta consequatur ex rerum ab omnis cumque recusandae. </p>
-    <button class="btn btn-primary">Daha Fazla</button>
+      <p>
+        <span style="font-size: 2rem">H</span>akkımızda Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Deleniti esse magnam est vel natus
+        maxime nemo voluptate doloribus error, inventore, et incidunt sapiente
+        facere odio quis neque fugit at voluptates! Fugiat sapiente
+        exercitationem distinctio consequuntur deleniti delectus! Velit earum
+        optio laudantium amet alias consequatur non ullam omnis. Nulla atque,
+        debitis, placeat sunt totam facilis odit excepturi tempora in
+        repellendus alias. Eligendi impedit itaque quis dolores tenetur nemo,
+        architecto nulla nesciunt facilis error possimus! Porro perferendis
+        quidem quia enim aut autem iure quam eveniet minima facilis praesentium,
+        molestiae et veritatis sunt. Voluptatibus, sequi! Tempora aut adipisci
+        debitis ex maxime corporis architecto, numquam reprehenderit ab quidem
+        quae porro. Tempora nam aliquid blanditiis natus iste, amet consequuntur
+        at impedit eligendi, numquam itaque vero? Enim veritatis perferendis
+        ipsa sunt veniam in autem quae aspernatur iste aliquid laborum qui, unde
+        suscipit assumenda maxime commodi, molestiae libero quaerat explicabo ea
+        at asperiores officiis. Officia, perferendis ipsum. Beatae dolorum
+        asperiores magnam soluta tempore nulla veritatis minus ipsa aperiam
+        explicabo id voluptate commodi fugit, quam dignissimos at debitis neque
+        ut officia. Cumque voluptate atque voluptatum ipsam explicabo non? Quis
+        eaque fugiat nesciunt. Perspiciatis quos mollitia eum exercitationem
+        dolores quibusdam! Fugit sapiente soluta exercitationem similique
+        deleniti sit praesentium unde optio! Accusantium natus porro quo eius
+        molestias eum doloremque in! Assumenda iste temporibus modi ab delectus
+        quas quasi dolorem in quos. Distinctio accusamus at quaerat possimus
+        omnis totam corporis, fugiat nostrum facere. Odio, perferendis
+        asperiores pariatur ipsa eligendi illo sapiente. Esse, quidem quaerat
+        animi quae cum asperiores iste aut rem minima numquam error vitae vero
+        voluptatem officia culpa exercitationem? Dolore asperiores quam
+        repudiandae, iure molestiae nesciunt laboriosam facere voluptates animi.
+        Ipsam nemo voluptates magni numquam nostrum veniam officia, at voluptas
+        consequatur? Magni, inventore commodi ipsa repellendus est tenetur,
+        laboriosam numquam iure id soluta consequatur ex rerum ab omnis cumque
+        recusandae.
+      </p>
+      <button class="btn btn-primary">Daha Fazla</button>
     </section>
     <!-- About end -->
 
@@ -56,6 +82,17 @@
     -->
       <!-- Blog Card Start -->
 
+      <!-- Custom Pipeline -->
+      <div class="form-group">
+          <input
+            class="form-control me-sm-2"
+            id="header"
+            placeholder="blog ara"
+            [(ngModel)]="filterText"
+          />
+          <small *ngIf="filterText" class="text-danger d-block">Gösterilen blog: {{filterText}}</small>
+      </div>
+
       <ng-container *ngIf="blogCard; then blog; else noBlogCard">
       </ng-container>
 
@@ -63,21 +100,26 @@
         <div class="container">
           <div class="row">
             <!-- card -->
+            <!-- custom Pipeline ekledim -->
             <div
-              *ngFor="let temp of blogCard"
+              *ngFor="let temp of blogCard | blogFilter:filterText"
               class="col-sm-12 col-md-3 col-lg-4"
             >
               <a [href]="temp.link"> </a>
-                <div class="card mb-3">
-                  <img class="card-img-top" [src]="temp.picture" alt="Title" />
-                  <div class="card-body">
-                    <h4 class="card-title">{{ temp.id }}</h4>
-                    <p class="card-text">{{ temp.text }}</p>
-                    <p class="card-text line-clamp8">{{ temp.description }}</p>
-                    <span class="text-muted float-end">{{ temp.date | date:'fullDate' }}</span>
-                  </div>
+              <div class="card mb-3">
+                <img class="card-img-top" [src]="temp.picture" alt="Title" />
+                <div class="card-body">
+                  <h4 class="card-title text-center">{{ temp.id }}</h4>
+                  <p class="card-text text-center fw-bolder">
+                    {{ temp.header }}
+                  </p>
+                  <p class="card-text">{{ temp.text }}</p>
+                  <p class="card-text line-clamp8">{{ temp.description }}</p>
+                  <span class="text-muted float-end">{{
+                    temp.date | date : "fullDate"
+                  }}</span>
                 </div>
-             
+              </div>
             </div>
 
             <!-- Hidden -->
@@ -92,6 +134,7 @@
           <!--end row -->
         </div>
       </ng-template>
+
       <ng-template #noBlogCard>
         <form action="#">
           <div class="container">

@@ -14,6 +14,9 @@ import { OnInit } from '@angular/core';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 
+// ngModel için
+import { FormsModule } from '@angular/forms';
+
 declare let $: any; //jquery
 declare let jQuery: any;
 
@@ -29,6 +32,7 @@ declare let jQuery: any;
   // Eğer Component veya Module ekliyorsanız burada olmak zorundadır.
   imports: [
     CommonModule, 
+    FormsModule,
     RouterOutlet, 
     RouterLink,
     OnepageHeaderComponent, 

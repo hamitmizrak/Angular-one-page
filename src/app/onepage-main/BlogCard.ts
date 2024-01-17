@@ -3,6 +3,7 @@
 export class BlogCard {
   // Field
   id: number;
+  header:string;
   title: string;
   text: string;
   description: string;
@@ -13,6 +14,7 @@ export class BlogCard {
   // constructor
   constructor(
     id: number,
+    header:string,
     title: string,
     text: string,
     description: string,
@@ -21,6 +23,7 @@ export class BlogCard {
     link:string
   ) {
     this.id = id;
+    this.header = header;
     this.title = title;
     this.text = text;
     this.description = description;
