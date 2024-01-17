@@ -1,25 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-// Router
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 
 // Header, Main, Footer
 import { OnepageHeaderComponent } from './onepage-header/onepage-header.component';
 import { OnepageMainComponent } from './onepage-main/onepage-main.component';
 import { OnepageFooterComponent } from './onepage-footer/onepage-footer.component';
-//import { OnepageProjectNameComponent } from './onepage-project-name/onepage-project-name.component';
+import { OnepageProjectNameComponent } from './onepage-project-name/onepage-project-name.component';
 import { OnePageNavbarComponent } from './one-page-navbar/one-page-navbar.component';
-import { OnInit } from '@angular/core';
-import { LoginComponent } from './login/login.component';
-import { AboutComponent } from './about/about.component';
-
-// ngModel için
-import { FormsModule } from '@angular/forms';
-
-declare let $: any; //jquery
-declare let jQuery: any;
-
 
 // Dikkat: Bütün Componentleri buraya eklemek zorundayız
 @Component({
@@ -32,15 +20,12 @@ declare let jQuery: any;
   // Eğer Component veya Module ekliyorsanız burada olmak zorundadır.
   imports: [
     CommonModule, 
-    FormsModule,
     RouterOutlet, 
-    RouterLink,
+    OnepageProjectNameComponent,
     OnepageHeaderComponent, 
     OnepageMainComponent, 
     OnepageFooterComponent,
     OnePageNavbarComponent,
-    LoginComponent,
-    AboutComponent
   ],
 
   // Html'de bu componentte kullanacağımız html dosyası
@@ -52,14 +37,9 @@ declare let jQuery: any;
 })
 
 // EXPORT: bu classı dışarda çağırmak istiyorsak
-export class AppComponent implements OnInit {
+export class AppComponent {
   // TS(TypeScript kodlarını buraya yazabiliriz)
   name="Hamit";
   surname="Mızrak";
   projectName = 'One Page';
-
-  ngOnInit():void{
-   
-    }
-    
 }

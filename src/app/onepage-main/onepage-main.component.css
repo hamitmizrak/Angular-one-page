@@ -1,73 +1,66 @@
-p {
-  text-transform: capitalize;
-  text-align: justify;
+p{
+    text-transform: capitalize;
+    text-align: justify;
 }
 
-img {
-  transition: 2s all;
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.9);
+img{
+    transition: 2s all;
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.9)
 }
 
-img:hover {
-  opacity: 0.8;
-  transform: scale(1.1);
-  transition: transform 0.5s ease-in-out;
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.8);
+img:hover{
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.8);
 }
 
-.my_clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+
+.my_clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
 }
 
-.line-clamp4 {
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
 
-.line-clamp8 {
-  display: -webkit-box;
-  -webkit-line-clamp: 8;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.line-clamp4{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
 
 /* BUSINESS */
-#business_id {
-  margin-bottom: 4rem;
-}
-#business_id i {
-  font-size: 5rem;
+#business_id i{
+font-size: 5rem;
 }
 
 /* ABOUT */
-#about_me_id {
-  background-color: rgb(134, 27, 228);
-  color: white !important;
-  height: 35rem;
-  padding: 2rem;
-  background-image: url("../../image/cup-of-coffee-1280537_1280.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+#about_me_id{
+    background-color: rgb(134, 27, 228);
+    color:white!important;
+    height: 35rem;
+    padding:2rem;
+    background-image: url('../../image/cup-of-coffee-1280537_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-#about_me_id p {
-  background-color: black;
-  opacity: 0.8;
-  padding: 2rem 1rem;
-  line-height: 1.3;
+#about_me_id p{
+    background-color: black;
+    opacity: 0.8;
+    padding:2rem 1rem;
+    line-height: 1.3;
 }
 
 /* BLOG */
-#blog_id {
+#blog_id{
+    
 }
 
 /* CONTACT */
-#contact_id {
-  background-color: rgb(134, 27, 228);
+#contact_id{
+    background-color: rgb(134, 27, 228);
 }

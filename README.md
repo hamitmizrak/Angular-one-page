@@ -22,7 +22,6 @@
 > ng new one-page
 > cd one-page/
 > ng serve
-> ng serve --open
 > ng serve --port 9999  0<=PORT<=65535 PORT<=1024 
 > ng --help
 ```
@@ -32,8 +31,6 @@
 > npm list -g
 > npm install -g typescript
 > npm install -g @angular/cli
-> npm install alertifyjs
-> npm install --save @ng-bootstrap/ng-bootstrap
 > ng serve
 > ng serve --port 9999
 ```
@@ -249,9 +246,6 @@ npm run nodemon_q
 ---
 ---
 ---
-
-## Code scaffolding
-> Routing 
 
 ## Code scaffolding
 
