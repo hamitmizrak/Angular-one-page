@@ -3,9 +3,13 @@
     background-image: url('../../image/cup-of-coffee-1280537_1280.jpg');
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    height: 70vh;
     z-index: -1;
-    padding-top: 20rem;
+    padding-top: 13rem;
+}
+
+#header_social a i{
+    font-size: 1rem;
 }
 
 #back_to_top_id{

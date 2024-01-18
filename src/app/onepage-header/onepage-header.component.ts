@@ -1,5 +1,7 @@
-// import
+// CommonModule
 import { CommonModule } from '@angular/common';
+
+//Core
 import { Component } from '@angular/core';
 
 @Component({
@@ -20,7 +22,17 @@ import { Component } from '@angular/core';
 })
 export class OnepageHeaderComponent {
   // Field
+  header:string="Angular Eğitimine Hoşgeldiniz";
+  title:string="Html5,Css3, Javascript, Ecmascript, Typescript, Angular";
+
+socialLinkedin:string="Linkedin";
+socialGithub:string="GitHub";
+socialYoutube:string="Youtube";
+socialBlogger:string="Blogger";
+
   // Constructor
+  constructor(){}
+
   // Method
 
 } //end OnepageHeaderComponent
