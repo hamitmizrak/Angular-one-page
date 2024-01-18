@@ -1,6 +1,8 @@
+// import
 import { User, userRolles } from './User';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 // Component
 @Component({
@@ -11,7 +13,7 @@ import { Component } from '@angular/core';
   standalone: true,
 
   // Projeye import edilecek alan
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
 
   // Html Template
   templateUrl: './one-page-navbar.component.html',
@@ -24,7 +26,7 @@ import { Component } from '@angular/core';
 export class OnePageNavbarComponent {
 
   // Field
-  homePage: String = 'Anasayfa 44';
+  // homePage: String = 'Anasayfa 44';
 
   // User Object
   User: User[] = [
@@ -83,7 +85,7 @@ export class OnePageNavbarComponent {
       style: string;
     };
   } = {
-    isLogin: true,
+    isLogin: false,
     logo: {
       logoName: 'Logo',
       logoFontAwesome: 'fa-solid fa-code-branch',
@@ -102,7 +104,7 @@ export class OnePageNavbarComponent {
       },
       { id: 2, name: 'about', link: '/about-me', fontAwesome: 'font-2' },
       { id: 3, name: 'blog', link: '/blog', fontAwesome: 'font-3' },
-      { id: 4, name: 'bontact', link: '/contact', fontAwesome: 'font-4' },
+      { id: 4, name: 'contact', link: '/contact', fontAwesome: 'font-4' },
     ],
     search: {
       name: 'search',
@@ -110,9 +112,10 @@ export class OnePageNavbarComponent {
       type: 'text',
       style: 'btn btn-primary',
     },
-  }; //navBar Object
+  }; // end navBar Object
 
   // Constructor
+  constructor(){}
 
   // Method
 }
