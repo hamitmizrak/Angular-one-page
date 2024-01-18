@@ -67,13 +67,14 @@
 
     <!-- Blog start -->
     <section id="blog_id">
+      <a href="/blog">
       <h2 class="text-center display-4 text-primary mb-4 mb-4">
         {{ onePageContent[2].title | uppercase }}
       </h2>
+    </a>
       <!-- 
         ngIf = expression ? then : else;
         Eğer blogCard true ise blog çalışsın yoksa noBlogCard çalışsın 
-      
         BlogCard: varsa 
         !BlogCard: yoksa 
     -->
@@ -98,6 +99,7 @@
                     <p class="card-text">{{ temp.title }}</p>
                     <p class="card-text">{{ temp.description }}</p>
                     <span class="text-muted float-end">{{ temp.date }}</span>
+                    <a [href]="temp.link" class="btn btn-primary">Details Page</a>
                   </div>
                 </div>
               </a>

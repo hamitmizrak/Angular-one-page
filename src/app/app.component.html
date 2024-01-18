@@ -3,21 +3,23 @@
 <!-- Project Name -->
 <!-- <app-onepage-project-name></app-onepage-project-name> -->
 
+<!-- Bütün Sayfalarda Sabit kalacak: Static -->
 <!-- start Navbar -->
 <app-one-page-navbar></app-one-page-navbar>
 <!-- end Navbar -->
 
+<!-- Bütün Sayfalarda Sabit kalacak: Static -->
 <!-- start Header -->
 <app-onepage-header> </app-onepage-header>
 <!-- end Header -->
 
-<!-- start Main -->
-<app-onepage-main> </app-onepage-main>
-<!-- end Main -->
+<!-- Bütün Sayfalarda Değişken olacaktır kalacak: Dynamics -->
+<!-- start Dynamics Router-->
+<!-- <app-onepage-main> </app-onepage-main> -->
+<router-outlet></router-outlet>
+<!-- end Dynamics Router-->
 
+<!-- Bütün Sayfalarda Sabit kalacak: Static -->
 <!-- start Footer -->
 <app-onepage-footer> </app-onepage-footer>
 <!-- end Header -->
-
-<!-- Router -->
-<router-outlet></router-outlet>
