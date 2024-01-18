@@ -8,13 +8,13 @@ import { Component } from '@angular/core';
 import { SocialContent } from './SocialContent';
 
 @Component({
-  // html
+  // Html Selector Template
   selector: 'app-onepage-header',
 
   // component: bağımsız çalışabilsin mi
   standalone: true,
 
-  // modül ekleme
+  // modül ekleme CommonModule: ngIf, ngFor etc
   imports: [CommonModule],
 
   // Html5 Url

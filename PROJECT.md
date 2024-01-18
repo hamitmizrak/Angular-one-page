@@ -3,6 +3,8 @@
 > ng g component      onepage-main
 > ng g component      onepage-footer
 > ng g c              onepage-navbar
+> ng g c              onePageLogin
+> ng g c              onePageRegister
 
 
 ## AppComponent (Component Eklemek)
