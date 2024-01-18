@@ -125,4 +125,7 @@ export class OnePageNavbarComponent {
   constructor(){}
 
   // Method
+  darkMode(){
+    alert("Dark Mode")
+  }
 }

@@ -91,18 +91,21 @@
               *ngFor="let temp of blogCard"
               class="col-sm-12 col-md-3 col-lg-4"
             >
-              <a [href]="temp.link">
+              <a (click)="detailPage()"> 
                 <div class="card mb-3">
                   <img class="card-img-top" [src]="temp.picture" alt="Title" />
                   <div class="card-body">
                     <h4 class="card-title">{{ temp.id }}</h4>
-                    <p class="card-text">{{ temp.title }}</p>
-                    <p class="card-text">{{ temp.description }}</p>
-                    <span class="text-muted float-end">{{ temp.date }}</span>
-                    <a [href]="temp.link" class="btn btn-primary">Details Page</a>
+                    <p class="card-text">{{ temp.header }}</p>
+                    <p class="card-text">{{ temp.text }}</p>
+                     <!-- <a (click)="detailPage()" [href]="temp.link" class="btn btn-primary">Details Page</a>-->
+                   
+                    <a (click)="detailPage()" class="btn btn-primary d-block">Details Page</a> 
+                    <span class="text-muted float-start">{{ temp.categoryName}}</span>
+                    <span class="text-muted float-end">{{ temp.date | date:"fullDate" }}</span>
                   </div>
                 </div>
-              </a>
+             </a>
             </div>
 
             <!-- Hidden -->

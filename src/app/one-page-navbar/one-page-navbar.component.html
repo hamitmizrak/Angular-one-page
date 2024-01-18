@@ -80,11 +80,6 @@
         </div>
       </ng-template>
 
-      <!-- Dark Mode -->
-      <button class="btn btn-danger ms-2 me-2">
-        <i class="fa-solid fa-moon"></i>
-      </button>
-
       <!-- Eğer login:false ise login/register görünsün -->
       <ng-template #loggedOut>
         <div class="btn-group">
@@ -113,6 +108,17 @@
           </div>
         </div>
       </ng-template>
+
+      <!-- Dark Mode -->
+      <!-- 
+      Eğer Atrributes ise [class] [href] etc => []
+      Eğer Event ise (click)="denemeEvent()"
+      click
+      dblclick
+      -->
+      <a  (click)="darkMode()" class="btn btn-danger ms-2 me-2">
+        <i class="fa-solid fa-moon"></i>
+      </a>
     </div>
     <!-- Right elements -->
 
