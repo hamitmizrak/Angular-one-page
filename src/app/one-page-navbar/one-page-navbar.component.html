@@ -35,6 +35,7 @@
 
     <!-- Right elements -->
     <div class="d-flex align-items-center">
+      <!-- Search -->
       <form class="d-flex my-2 my-lg-0 me-2">
         <input
           class="form-control me-sm-2"
@@ -44,7 +45,7 @@
         <button [class]="navBar.search.style" type="submit">Search</button>
       </form>
 
-      <!-- Avatar -->
+      <!-- Login Register -->
       <!-- Eğer kullanıcı sisteme giriş yapmışsa Login/Register Görünmesin -->
       <ng-container *ngIf="navBar.isLogin; then loggedInd; else loggedOut">
       </ng-container>
@@ -79,6 +80,11 @@
         </div>
       </ng-template>
 
+      <!-- Dark Mode -->
+      <button class="btn btn-danger ms-2 me-2">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
       <!-- Eğer login:false ise login/register görünsün -->
       <ng-template #loggedOut>
         <div class="btn-group">
@@ -90,14 +96,14 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-          <i class="fa-regular fa-user"></i>
+            <i class="fa-regular fa-user"></i>
           </button>
           <div
             class="dropdown-menu dropdown-menu-end"
             aria-labelledby="triggerId"
           >
             <a class="btn btn-primary" routerLink="/about">About444</a>
-            <a class="dropdown-item" routerLink="/login" >Login</a>
+            <a class="dropdown-item" routerLink="/login">Login</a>
             <a class="dropdown-item" routerLink="/register">Register</a>
             <a class="dropdown-item disabled" href="#">Disabled action</a>
             <h6 class="dropdown-header">Section header</h6>
@@ -107,8 +113,9 @@
           </div>
         </div>
       </ng-template>
-    </div><!-- Right elements -->
-  
+    </div>
+    <!-- Right elements -->
+
     <!-- Optional: Place to the bottom of scripts -->
     <!-- <script>
       const myModal = new bootstrap.Modal(
@@ -116,6 +123,7 @@
         options,
       );
     </script> -->
-    
-  </div><!-- end conainer -->
-</nav><!--end Navbar -->
+  </div>
+  <!-- end conainer -->
+</nav>
+<!--end Navbar -->
