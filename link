@@ -1,3 +1,4 @@
   <a class="btn btn-primary" routerLink="/about">About444</a>
-            <a class="dropdown-item" routerLink="/login" >Login</a>
-            <a class="dropdown-item" routerLink="/register">Register</a>
+  <a class="dropdown-item" routerLink="/login" >Login</a>
+   <a class="dropdown-item" routerLink="/register">Register</a>
+   <a class="dropdown-item" routerLink="/blog">Blog</a>

@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 // Core 
 import { Component } from '@angular/core';
 
+// Router Link
+import { RouterLink } from '@angular/router';
+
 @Component({
 
   // Html Selector Template
@@ -13,7 +16,7 @@ import { Component } from '@angular/core';
   standalone: true,
 
   // modül ekleme CommonModule: ngIf, ngFor etc
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
 
    // Html5 Url
   templateUrl: './one-page-login.component.html',

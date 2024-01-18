@@ -4,19 +4,22 @@ import { CommonModule } from '@angular/common';
 // Component Core
 import { Component } from '@angular/core';
 
+// Router Link
+import { RouterLink } from '@angular/router';
+
 // BlogCard Ekledim
 import { BlogCard } from './BlogCard';
 import { OnePageContent } from './OnePageContent';
 
 @Component({
-  // html Template
+   // Html Selector Template
   selector: 'app-onepage-main',
 
   // Bu component tek başına çalışsın
   standalone: true,
 
   // import modülümüz
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
 
   // Html Url
   templateUrl: './onepage-main.component.html',
