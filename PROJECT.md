@@ -1,4 +1,4 @@
-## Angular CLI Hazır Bileşenler
+## Angular CLI Hazır Bileşenler (Component)
 > ng g component      onepage-header
 > ng g component      onepage-main
 > ng g component      onepage-footer
@@ -6,6 +6,9 @@
 > ng g c              onePageLogin
 > ng g c              onePageRegister
 > ng g c              onePageBlogPage
+
+> ## Angular CLI Hazır Bileşenler (Pipeline)
+> ng g pipe      searchBlogFilter
 
 
 ## AppComponent (Component Eklemek)
