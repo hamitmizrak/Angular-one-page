@@ -4,19 +4,22 @@
   <div class="jumbotron text-white text-shadow">
     <div class="container">
       <div class="text-center p-5">
-        <h1 class="text-uppercase shadow">{{header}}</h1>
+        <h1 class="text-uppercase shadow">{{ header }}</h1>
         <h4 class="text-capitalize shadow">
-          {{title}}
+          {{ title }}
         </h4>
         <div id="header_social" class="mt-4 mb-3">
-          <a href="" class="btn btn-primary me-2"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="" class="btn btn-danger me-2"><i class="fa-brands fa-github"></i></a>
-          <a href="" class="btn btn-secondary me-2"><i class="fa-brands fa-youtube"></i></a>
-          <a href="" class="btn btn-dark me-2"><i class="fa-brands fa-blogger-b"></i></a>
+          <span *ngFor="let temp of socialContent">
+            <a [href]="temp.link" [class]="temp.classSocial"
+              ><i [class]="temp.icon"></i
+            ></a>
+          </span>
         </div>
       </div>
-    </div><!-- container -->
-  </div><!-- jumbotron -->
+    </div>
+    <!-- container -->
+  </div>
+  <!-- jumbotron -->
 </header>
 <!-- Start Header -->
 
