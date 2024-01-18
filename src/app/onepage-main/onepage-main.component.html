@@ -97,11 +97,11 @@
                   <div class="card-body">
                     <h4 class="card-title">{{ temp.id }}</h4>
                     <p class="card-text">{{ temp.header }}</p>
-                    <p class="card-text">{{ temp.text }}</p>
+                    <p class="card-text line-clamp4">{{ temp.text }}</p>
                      <!-- <a (click)="detailPage()" [href]="temp.link" class="btn btn-primary">Details Page</a>-->
                    
                     <a (click)="detailPage()" class="btn btn-primary d-block">Details Page</a> 
-                    <span class="text-muted float-start">{{ temp.categoryName}}</span>
+                    <span class="text-muted float-start">{{ temp.categoryName | titlecase}}</span>
                     <span class="text-muted float-end">{{ temp.date | date:"fullDate" }}</span>
                   </div>
                 </div>

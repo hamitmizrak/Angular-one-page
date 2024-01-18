@@ -61,7 +61,7 @@
               <img class="card-img-top" [src]="temp.picture" alt="Title" />
               <div class="card-body">
                 <h4 class="card-title text-center">{{ temp.id }}</h4>
-                <p class="card-text text-center fst-italic fw-bold ">{{ temp.header | titlecase }}</p>
+                <p class="card-text text-center fst-italic fw-bold ">{{ temp.header | uppercase  }}</p>
                 <p class="card-text line-clamp4 text-center">{{ temp.text }}</p>
                 <!-- <a (click)="detailPage()" [href]="temp.link" class="btn btn-primary">Details Page</a>-->
 
@@ -69,7 +69,7 @@
                   >Details Page</a
                 >
                 <span class="text-muted float-start">{{
-                  temp.categoryName
+                  temp.categoryName | titlecase
                 }}</span>
                 <span class="text-muted float-end">{{
                   temp.date | date : "fullDate"
