@@ -140,6 +140,7 @@ let tsArray = () => {
 
   // 2.YOL
   let array_1: Array<number> = [1, 2, 9, 5, 3];
+  
 
   //console.log(array[0]);
   //array[5] = 23;
@@ -739,6 +740,54 @@ typeAssertionsFunction();
 // #### INTERFACE #################################################
 // TypeScript Interface
 
+const interfaceFunction =()=>{
+// INTERFACE
+export interface Deneme {
+  id: number;
+  name: string;
+  isLogin: true;
+
+  // Gövdesiz Methods
+  govdesizMethod():void;
+}
+//////////////////////////////////////////////////
+
+// Interface Function
+function save(deneme: Deneme): void {
+  console.log(deneme.name + ' kaydettim');
+}
+
+// interface ekledim
+save({
+    id: 1, name: 'isim-1', isLogin: true,
+    govdesizMethod: function (): void {
+        throw new Error("Function not implemented.");
+    }
+});
+
+//////////////////////////////////////////////////
+
+// Interface Class 
+class Bilmem implements Deneme {
+    //Field
+    id: number;
+    name: string;
+    isLogin: true;
+
+    // Constructor
+    constructor(id: number, name:string, isLogin: true) {
+        this.id = id;
+        this.name = name;
+        this.isLogin = isLogin;
+    }
+    govdesizMethod(): void {
+        throw new Error("Method not implemented.");
+    }
+}
+
+const kalem = new Bilmem(1, 'isim-1', true);
+}
+//interfaceFunction();
 
 // ###############################################################
 // TypeScript Never

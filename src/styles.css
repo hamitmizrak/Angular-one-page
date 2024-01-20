@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Bootstrap Ekle */
-/* @import "~/bootstrap/dist/css/bootstrap.min.css"*/
+/* Bootstrap */
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 /* Font awesome */
-/* @import "~/font-awesome/css/font-awesome.min.css"*/
 @import "font-awesome/css/font-awesome.min.css";
+
+/* Alertift */
+@import "alertifyjs/build/css/themes/default.min.css";
+@import "alertifyjs/build/css/alertify.min.css";

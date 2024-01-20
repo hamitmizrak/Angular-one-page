@@ -12,7 +12,7 @@ import { RouterLink } from '@angular/router';
 
 // Component
 @Component({
-  // Html Template 
+  // Html Template
   selector: 'app-one-page-navbar',
 
   // Bu component tek başına çalışsın
@@ -26,6 +26,9 @@ import { RouterLink } from '@angular/router';
 
   // Css Template
   styleUrl: './one-page-navbar.component.css',
+
+  // provider Local Service 
+   //providers:[]
 })
 
 // EXPORT
@@ -34,11 +37,18 @@ export class OnePageNavbarComponent {
   // Field
   // homePage: String = 'Anasayfa 44';
 
+    // Constructor
+    constructor(){}
+
+    
+
   // User Object
   User: User[] = [
     {
       id: 1,
-      username: 'Hamit Mizrak',
+      name: 'Hamit',
+      surname: 'Mızrak',
+      username: 'HamitM',
       email: 'hamitmizrak@gmail.com',
       password: '123456',
       pictures:
@@ -49,27 +59,31 @@ export class OnePageNavbarComponent {
     },
     {
       id: 2,
-      username: 'writer1',
-      email: 'writer1@gmail.com',
+      name: 'Hamit',
+      surname: 'Mızrak',
+      username: 'HamitM',
+      email: 'hamitmizrak@gmail.com',
       password: '123456',
       pictures:
         'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
       date: String(new Date().getFullYear()),
-      link: 'https://writer1/',
+      link: 'https://admin1/',
       rolles: userRolles.writer,
     },
     {
       id: 3,
-      username: 'user1',
-      email: 'huser1@gmail.com',
+      name: 'Hamit',
+      surname: 'Mızrak',
+      username: 'HamitM',
+      email: 'hamitmizrak@gmail.com',
       password: '123456',
       pictures:
         'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
       date: String(new Date().getFullYear()),
-      link: 'https://user1/',
+      link: 'https://admin1/',
       rolles: userRolles.user,
     },
-  ];
+  ]; //end User
 
   // navBar adında bir obje oluşturunuz.
   // navBar:{}={};
@@ -91,7 +105,7 @@ export class OnePageNavbarComponent {
       style: string;
     };
   } = {
-    isLogin: false,
+    isLogin: false, // login olmamış
     logo: {
       logoName: 'Logo',
       logoFontAwesome: 'fa-solid fa-code-branch',
@@ -121,11 +135,10 @@ export class OnePageNavbarComponent {
     },
   }; // end navBar Object
 
-  // Constructor
-  constructor(){}
+
 
   // Method
   darkMode(){
     alert("Dark Mode")
   }
-}
+} //end navbar

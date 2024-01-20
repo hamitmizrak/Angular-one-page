@@ -8,6 +8,7 @@ import { OnepageMainComponent } from './onepage-main/onepage-main.component';
 import { OnepageFooterComponent } from './onepage-footer/onepage-footer.component';
 import { OnepageProjectNameComponent } from './onepage-project-name/onepage-project-name.component';
 import { OnePageNavbarComponent } from './one-page-navbar/one-page-navbar.component';
+import { AlertifyMessageService } from './services/alertifyMessage.service';
 
 // Dikkat: Bütün Componentleri buraya eklemek zorundayız
 @Component({
@@ -17,29 +18,46 @@ import { OnePageNavbarComponent } from './one-page-navbar/one-page-navbar.compon
   // Bu componentin tek başına kullanmamıza olanak sağlar
   standalone: true,
 
-  // Eğer Component veya Module ekliyorsanız burada olmak zorundadır.
+  // Eğer Component veya Module ekliyorsanız burada olmak zorundayız.
   imports: [
-    CommonModule, 
-    RouterOutlet, 
+    CommonModule,
+    RouterOutlet,
     OnepageProjectNameComponent,
-    OnepageHeaderComponent, 
-    OnepageMainComponent, 
+    OnepageHeaderComponent,
+    OnepageMainComponent,
     OnepageFooterComponent,
     OnePageNavbarComponent,
   ],
 
+
+  /* 
+   Global state demek: Uygulama açıldığında her yerde kullanılabilir.
+   Global state demek: Uygulama açıldığında bir örneği(instance) oluşması demektir.
+   Buradaki Global olmasını istiyorsak buraya ekliyoruz.
+   Örneğin: AlertifyMessageService : Global service olması için ekleyebiliriz.
+  */
+  // 1.YOL
+  providers: [AlertifyMessageService],
+  // 2.YOL
+  // Eğer istersen ; AlertifyMessageService services içinde şöyle yaparsanda çalışır.
+  /*
+      @Injectable({
+      providedIn: 'root', //buradaki providedIn: Global State olması içindir
+    })
+  */
+ 
   // Html'de bu componentte kullanacağımız html dosyası
   // template:  Html kullanmadan direk html kodlarını template:``
   templateUrl: './app.component.html',
 
   // Css'de bu componentte kullanacağımız css dosyası
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 
 // EXPORT: bu classı dışarda çağırmak istiyorsak
 export class AppComponent {
   // TS(TypeScript kodlarını buraya yazabiliriz)
-  name="Hamit";
-  surname="Mızrak";
+  name = 'Hamit';
+  surname = 'Mızrak';
   projectName = 'One Page';
 }

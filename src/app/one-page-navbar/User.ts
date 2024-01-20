@@ -5,10 +5,22 @@ export enum userRolles {
   user = 'USER',
 }
 
+// User Interface
+// NOT: Interface'de buradaki alanlar zorunludur. implements ettiğin yerde eklemelisin
+export interface IUser {
+  name: string;
+  surname: string;
+  username: string;
+  email: string;
+  password: string;
+}
+
 // ABSTRACT
-abstract class Person {
+export abstract class Person implements IUser {
   //Field
   id: number;
+  name: string;
+  surname: string;
   username: string;
   email: string;
   password: string;
@@ -19,6 +31,8 @@ abstract class Person {
   //Constructor
   constructor(
     id: number,
+    name: string,
+    surname: string,
     username: string,
     email: string,
     password: string,
@@ -27,6 +41,8 @@ abstract class Person {
     link: string
   ) {
     this.id = id;
+    this.name = name;
+    this.surname = surname;
     this.username = username;
     this.email = email;
     this.password = password;
@@ -35,14 +51,12 @@ abstract class Person {
     this.link = link;
   }
 
-  //Method (Gövdeli)
-//   personInformation():void{
-//     console.log("Gövdeli method");
-//   }
+  // Method (Gövdeli)
+  //   personInformation():void{
+  //     console.log("Gövdeli method");
+  //   }
   //Method (Gövdesiz)
 } //end abstract
-
-// INTERFACE
 
 // User (Extends)
 export class User extends Person {
@@ -53,6 +67,8 @@ export class User extends Person {
   // Constructor
   constructor(
     id: number,
+    name: string,
+    surname: string,
     username: string,
     email: string,
     password: string,
@@ -61,8 +77,13 @@ export class User extends Person {
     link: string,
     rolles: string
   ) {
-    super(id,username,email,password,pictures,date,link); // abstract'ten gelen
+    super(id, name, surname, username, email, password, pictures, date, link); // abstract'ten gelen
     this.rolles = rolles;
   }
   // Method
+
+  // Rol Dizisi
+
 }
+
+// INTERFACE

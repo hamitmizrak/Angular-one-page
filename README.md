@@ -9,6 +9,12 @@
 
 ---
 
+## VS Kısayollar
+```sh
+> ctrl+shift+p= Search 
+> https://www.ceyrekmuhendis.com/kullanisli-visual-studio-code-kisayollari/
+```
+
 ## Kurulumlar
 ```sh
 > node -v
@@ -66,6 +72,12 @@
 > ng g directive      onepage-pipeline
 > ng g interface      onepage-pipeline
 > ng g enum           onepage-pipeline
+> 
+> ng g c component  
+> ng g i interface 
+> ng g s services
+> ng g p pipeline
+> ng g e enum
 
 ## Angular Configuration
 > npm config list -l
@@ -73,8 +85,6 @@
 > npm update modulAdi --save-dev
 > npm uninstall modulAdi --save-dev
 > npm get ayarAdi
-
-
 
 ## Angular NPM Kurulumları
 - npm install bootstrap 
@@ -85,8 +95,6 @@
 - npm i
 - npm update 
 - npm uninstall modulAdi
-
-
 
 ## Style CSS
 ```sh
@@ -123,7 +131,6 @@
 - Angular Html,css, .ts(compiler) => .js(interpreter) => Browser
 - TS: OOP yakındır.
 - Angular components+services+... (module)
-
 
 ## Angular Realase
 - Angular JS (2010)

@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 
 // Page
 import { OnepageMainComponent } from './onepage-main/onepage-main.component';
-import { OnePageBlogPageComponent } from './one-page-blog-page/one-page-blog-page.component';
+import { OnePageBlogDetailsComponent } from './one-page-blog-details/one-page-blog-details.component';
 import { OnePageLoginComponent } from './one-page-login/one-page-login.component';
 import { OnePageRegisterComponent } from './one-page-register/one-page-register.component';
 
@@ -14,10 +14,10 @@ export const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
 
   // Blog Page
-  { path: 'blog', component: OnePageBlogPageComponent },
+  { path: 'blog', component: OnePageBlogDetailsComponent },
 
   // Login Page
-  { path: 'login', component: OnePageLoginComponent },
+  { path: 'login/:userId', component: OnePageLoginComponent },
 
   // Register Page
   { path: 'register', component: OnePageRegisterComponent },

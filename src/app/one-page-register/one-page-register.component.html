@@ -1,1 +1,80 @@
-<p>REGISTER</p>
+<!-- Register Form -->
+<div class="container">
+<!--
+registerForm:Form adı
+ngForm:Form adı
+ngSubmit:Event Binding(Submit)
+registerCreate:Form adı
+-->
+  <h1 class="text-center display-5">Register</h1>
+
+  <form #registerForm="ngForm" (ngSubmit)="registerCreate(registerForm)">
+    <!-- USERNAME -->
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control mb-3"
+        placeholder="Kullanıcı Adınızı giriniz"
+        title="Adınızı giriniz"
+        name="username"
+        id="username"
+        required
+        autofocus
+        #usernameValue44="ngModel"
+        [(ngModel)]="user.username"
+      />
+      <!--
+      name.dirty:iptal edildi
+      name.touched:değiştirildi
+      name.pristine:değiştirilmedi
+      -->
+      <span
+        *ngIf="usernameValue44.invalid && usernameValue44.dirty"
+        class="alert alert-primary"
+        >Kullanıcı Adınızı girmediniz</span
+      >
+    </div>
+
+    <!-- EMAIL -->
+    <div class="form-group">
+      <input
+        type="email"
+        class="form-control mb-3"
+        placeholder="Kullanıcı Emaili giriniz"
+        title="Email giriniz"
+        name="email"
+        id="email"
+        required
+        autofocus
+        #emailValue44="ngModel"
+        [(ngModel)]="user.email"
+      />
+      <span
+        *ngIf="emailValue44.invalid && emailValue44.dirty"
+        class="alert alert-primary"
+      >
+        Emailinizi girmediniz</span
+      >
+    </div>
+
+    <!-- ROLLER -->
+    <!-- <div class="form-group">
+      <select>
+        <option
+          *ngFor="let roller of rolArray"
+          #rollesId="ngModel"
+          [(ngModel)]="user.id"
+          [value]="roller"
+        ></option>
+      </select>
+    </div> -->
+
+    <!-- [disabled]="registerForm.invalid" ==>  form aktifse butonda aktiftir -->
+    <button
+    type="submit"
+    [disabled]="registerForm.invalid"
+    class="btn btn-primary">Gönder</button>
+  </form>
+</div>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
