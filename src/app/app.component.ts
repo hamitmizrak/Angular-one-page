@@ -10,6 +10,10 @@ import { OnepageProjectNameComponent } from './onepage-project-name/onepage-proj
 import { OnePageNavbarComponent } from './one-page-navbar/one-page-navbar.component';
 import { AlertifyMessageService } from './services/alertifyMessage.service';
 
+// Http Client (Apiler için)
+import { HttpClientModule } from '@angular/common/http';
+
+
 // Dikkat: Bütün Componentleri buraya eklemek zorundayız
 @Component({
   // Html tag'i oluşturmak
@@ -27,6 +31,7 @@ import { AlertifyMessageService } from './services/alertifyMessage.service';
     OnepageMainComponent,
     OnepageFooterComponent,
     OnePageNavbarComponent,
+    HttpClientModule,
   ],
 
 

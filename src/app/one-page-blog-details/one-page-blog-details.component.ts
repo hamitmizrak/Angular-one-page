@@ -1,26 +1,26 @@
 // Common Module
-import {CommonModule} from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 // Component Core
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 // Router Link
-import {RouterLink} from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 // Blog Card
-import {BlogCard} from '../onepage-main/BlogCard';
+import { BlogCard } from '../onepage-main/BlogCard';
 
 // Custom Pipeline
-import {SearchBlogFilterPipe} from '../custom-pipeline/search-blog-filter.pipe';
+import { SearchBlogFilterPipe } from '../custom-pipeline/search-blog-filter.pipe';
 
 // Two way Data Bind (ng Model)
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 // Global Services (Alertify Servicesi  kullanmak istiyorsak buraya eklemeliyiz.)
-import {AlertifyMessageService} from '../services/alertifyMessage.service';
+import { AlertifyMessageService } from '../services/alertifyMessage.service';
 
 // Local Services (BlogArrayDataService)
-import {BlogArrayDataService} from '../services/blogArrayData.service';
+import { BlogArrayDataService } from '../services/blogArrayData.service';
 
 @Component({
   // Html Selector Template
@@ -58,18 +58,31 @@ export class OnePageBlogDetailsComponent implements OnInit {
   constructor(
     private alertifyMessageService: AlertifyMessageService,
     private blogArrayDataService: BlogArrayDataService
-  ) {
-  }
+  ) {}
 
+
+
+  // BlogCard (Local Service Aldım)
+  // 1.YOL (Manuel oluşturulmuş BlogCard)
+  // blogCard: BlogCard[] = this.blogArrayDataService.blogCard;
+
+  // 2.YOL (json-server ile oluşturulmuş blogCard bir datayı Api isteği ilealdım.)
+  //blogCard: BlogCard[] = this.blogArrayDataService.blogCard2;
+
+
+  // 3.YOL (Observable blogCard)
+  blogCard: BlogCard[] = new Array<BlogCard>();
   // ngOnInit: Constructor sonrasında çalışır
   // ngOnInit
   ngOnInit(): void {
     //throw new Error('Method not implemented.');
     this.alertifyMessageService.alertMessage('Detail Page Hoşgeldiniz.');
-  }
 
-  // BlogCard (Local Service Aldım)
-  blogCard: BlogCard[] = this.blogArrayDataService.blogCard;
+    // 3.Yol olarak Observable blogCard çağırmak
+    this.blogArrayDataService.getObservableBlogCard().subscribe(response=>
+      this.blogCard = response
+      );
+  }
 
   // Method
   //Method
