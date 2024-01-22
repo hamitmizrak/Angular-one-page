@@ -8,7 +8,19 @@
 > ng g c              onePageBlogPage
 
 > ## Angular CLI Hazır Bileşenler (Pipeline)
-> ng g pipe      searchBlogFilter
+> mkdir pipe-custom
+> cd pipe-custom
+> ng g pipe  searchBlogFilter
+> ng g p  searchBlogFilter
+
+> ## Angular CLI Hazır Bileşenler (Pipeline)
+- npm install bootstrap 
+- npm install alertifyjs
+- npm install bootstrap
+- npm install font-awesome angular-font-awesome
+- npm install jquery
+- npm install popper
+- npm install json-server
 
 
 ## AppComponent (Component Eklemek)
@@ -40,6 +52,15 @@ export class AppComponent {
   title = 'one-page';
 }
 ```
+
+## Angular CLI Hazır Bileşenler (Services)
+- mkdir services
+- cd service
+- ng generate service AlertifyMessageService (Global)
+- ng generate service BlogArrayService (Local)
+- ng g s AlertifyMessage  => (Global)
+- ng g s BlogArray        =>  (Local)
+
 
 ## Header Component
 ng generate component one-page-header (Class: OnepageHeaderComponent)

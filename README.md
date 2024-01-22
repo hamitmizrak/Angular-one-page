@@ -105,10 +105,12 @@ Non-Case Sensitive (Html,Css,SQL)
 
 ## Angular NPM Kurulumları
 - npm install bootstrap 
+- npm install alertifyjs
+- npm install bootstrap
 - npm install font-awesome angular-font-awesome
 - npm install jquery
 - npm install popper
-- npm install alertifyjs
+- npm install json-server
 - npm i
 - npm update 
 - npm uninstall modulAdi
