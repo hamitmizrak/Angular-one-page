@@ -8,7 +8,7 @@ declare let alertify: any;
 //   providedIn: 'root' //providedIn: Kaldırırsam Local Service olacaktır.
 // })
 
-// GLOBAL_SERVICE
+// GLOBAL_SERVICE (providedIn yazmalısınız)
 @Injectable({
   providedIn: 'root',
 })

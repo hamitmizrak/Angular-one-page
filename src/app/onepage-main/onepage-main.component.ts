@@ -16,6 +16,8 @@ import { OnePageContent } from './OnePageContent';
 // SERVICE
 // AlertifyMessageService
 import { AlertifyMessageService } from '../services/alertify-message.service';
+// BlogArrayService
+import { BlogArrayService } from '../services/blog-array.service';
 
 @Component({
   // Html Selector Template
@@ -33,19 +35,28 @@ import { AlertifyMessageService } from '../services/alertify-message.service';
 
   // Css Url
   styleUrl: './onepage-main.component.css',
+
+  // Local Service İçin Mutlaka providers eklemlisniz.
+  providers: [BlogArrayService],
 })
-export class OnepageMainComponent implements OnInit { 
+export class OnepageMainComponent implements OnInit {
   // Field
 
   // Constructor
   // Service eklemek istiyorsak
-  constructor(private alertifyMessageService: AlertifyMessageService) {}
+  // Global Service (AlertifyMessageService)
+  // Local Service (BlogArrayService)
+  // Local Service için : providers Eklemelisiniz.
+  constructor(
+    private alertifyMessageService: AlertifyMessageService,
+    private blogArrayService: BlogArrayService
+  ) {}
 
   // ngOnInit
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
     // Alertify Calling
-    this.alertifyMessageService.alertMessage("Sayfamıza Hoşgeldiniz.")
+    this.alertifyMessageService.alertMessage('Sayfamıza Hoşgeldiniz.');
   }
 
   // Page Content
@@ -56,10 +67,10 @@ export class OnepageMainComponent implements OnInit {
     { id: 4, title: 'contact' },
   ];
 
-  // 1.YOL
-  // blogCard: any[] = [
 
-  // 2.YOL (Mock Api)
+  // 1.YOL (BLOG CARD)
+  /*
+  blogCard: any[] = []
   blogCard: BlogCard[] = [
     {
       id: 1,
@@ -71,70 +82,13 @@ export class OnepageMainComponent implements OnInit {
         'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
       date: String(new Date()),
       link: 'blog',
-      categoryName:"frontend"
-    },
-    {
-      id: 2,
-      header: 'backend-1',
-      title: 'Title-2',
-      text: 'backend-1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate error tempore officia unde! Ut dignissimos consequatur, minus quasi, suscipit, voluptate corporis debitis ab tempore perferendis alias? Sint, porro aspernatur! Ipsum possimus nobis non perspiciatis nesciunt pariatur quia quos. Vel, ipsa, modi cumque possimus enim provident dolorum perferendis praesentium commodi itaque a dolorem recusandae ea voluptatem odio, esse aliquid nostrum. Molestias cupiditate blanditiis ut sequi velit corporis deserunt reprehenderit a voluptatem accusantium, modi dicta provident iure corrupti hic vitae. Dolorem illo perferendis omnis asperiores dignissimos neque quos, natus repellat voluptatum.',
-      description: 'Description-2',
-      picture:
-        'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
-      date: String(new Date()),
-      link: 'blog',
-      categoryName:"backend"
-    },
-    {
-      id: 3,
-      header: 'database',
-      title: 'Title-3',
-      text: 'database Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate error tempore officia unde! Ut dignissimos consequatur, minus quasi, suscipit, voluptate corporis debitis ab tempore perferendis alias? Sint, porro aspernatur! Ipsum possimus nobis non perspiciatis nesciunt pariatur quia quos. Vel, ipsa, modi cumque possimus enim provident dolorum perferendis praesentium commodi itaque a dolorem recusandae ea voluptatem odio, esse aliquid nostrum. Molestias cupiditate blanditiis ut sequi velit corporis deserunt reprehenderit a voluptatem accusantium, modi dicta provident iure corrupti hic vitae. Dolorem illo perferendis omnis asperiores dignissimos neque quos, natus repellat voluptatum.',
-      description: 'Description-3',
-      picture:
-        'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
-      date: String(new Date()),
-      link: 'blog',
-      categoryName:"database"
-    },
-    {
-      id: 4,
-      header: 'webservis',
-      title: 'Title-4',
-      text: 'webservis Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate error tempore officia unde! Ut dignissimos consequatur, minus quasi, suscipit, voluptate corporis debitis ab tempore perferendis alias? Sint, porro aspernatur! Ipsum possimus nobis non perspiciatis nesciunt pariatur quia quos. Vel, ipsa, modi cumque possimus enim provident dolorum perferendis praesentium commodi itaque a dolorem recusandae ea voluptatem odio, esse aliquid nostrum. Molestias cupiditate blanditiis ut sequi velit corporis deserunt reprehenderit a voluptatem accusantium, modi dicta provident iure corrupti hic vitae. Dolorem illo perferendis omnis asperiores dignissimos neque quos, natus repellat voluptatum.',
-      description: 'Description-4',
-      picture:
-        'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
-      date: String(new Date()),
-      link: 'blog',
-      categoryName:"webservis"
-    },
-    {
-      id: 5,
-      header: 'frontend-2',
-      title: 'Title-5',
-      text: 'frontend-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate error tempore officia unde! Ut dignissimos consequatur, minus quasi, suscipit, voluptate corporis debitis ab tempore perferendis alias? Sint, porro aspernatur! Ipsum possimus nobis non perspiciatis nesciunt pariatur quia quos. Vel, ipsa, modi cumque possimus enim provident dolorum perferendis praesentium commodi itaque a dolorem recusandae ea voluptatem odio, esse aliquid nostrum. Molestias cupiditate blanditiis ut sequi velit corporis deserunt reprehenderit a voluptatem accusantium, modi dicta provident iure corrupti hic vitae. Dolorem illo perferendis omnis asperiores dignissimos neque quos, natus repellat voluptatum.',
-      description: 'Description-5',
-      picture:
-        'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
-      // date: String(new Date().getFullYear()),
-      date: String(new Date()),
-      link: 'blog',
-      categoryName:"frontend"
-    },
-    {
-      id: 6,
-      header: 'backend-2',
-      title: 'Title-6',
-      text: 'Backend-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate error tempore officia unde! Ut dignissimos consequatur, minus quasi, suscipit, voluptate corporis debitis ab tempore perferendis alias? Sint, porro aspernatur! Ipsum possimus nobis non perspiciatis nesciunt pariatur quia quos. Vel, ipsa, modi cumque possimus enim provident dolorum perferendis praesentium commodi itaque a dolorem recusandae ea voluptatem odio, esse aliquid nostrum. Molestias cupiditate blanditiis ut sequi velit corporis deserunt reprehenderit a voluptatem accusantium, modi dicta provident iure corrupti hic vitae. Dolorem illo perferendis omnis asperiores dignissimos neque quos, natus repellat voluptatum.',
-      description: 'Description-6',
-      picture:
-        'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
-      date: String(new Date()),
-      link: 'blog',
-      categoryName:"backend"
+      categoryName: 'frontend',
     },
   ];
+  */
+
+  // 2.YOL (BLOG CARD): Döngüsel Object
+  blogCard: BlogCard[] =this.blogArrayService.blogCardFunction();
 
   //Method
   detailPage() {
