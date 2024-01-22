@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* Dikkat: @import sonrasında noktalı virgül (;) ekleyiniz. */
 /* Bootstrap Ekle */
 /* @import "~/bootstrap/dist/css/bootstrap.min.css"*/
 @import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,3 +8,12 @@
 /* Font awesome */
 /* @import "~/font-awesome/css/font-awesome.min.css"*/
 @import "font-awesome/css/font-awesome.min.css";
+
+/* Alertify */
+@import "alertifyjs/build/css/alertify.min.css";
+/* Alertify Themes */
+@import "alertifyjs/build/css/themes/bootstrap.min.css";
+/* 
+@import "alertifyjs/build/css/themes/semantic.min.css";
+@import "alertifyjs/build/css/themes/default.min.css"; 
+*/
