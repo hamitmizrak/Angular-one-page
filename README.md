@@ -30,6 +30,10 @@ Non-Case Sensitive (Html,Css,SQL)
 > npm list -g
 > npm install -g typescript
 > npm install -g @angular/cli
+> npm install alertifyjs
+> npm install bootstrap
+> npm install font-awesome
+> npm install jquery
 > ng version
 > ng v
 > ng new one-page
@@ -48,6 +52,10 @@ Non-Case Sensitive (Html,Css,SQL)
 > npm list -g
 > npm install -g typescript
 > npm install -g @angular/cli
+> npm install alertifyjs
+> npm install bootstrap
+> npm install font-awesome
+> npm install jquery
 > ng serve
 > ng serve --port 9999
 ```
