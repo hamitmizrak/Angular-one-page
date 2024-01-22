@@ -1,7 +1,7 @@
 // CommonModule
 import { CommonModule } from '@angular/common';
 
-// Core
+//Core
 import { Component } from '@angular/core';
 
 // SocialContent
@@ -23,14 +23,13 @@ import { SocialContent } from './SocialContent';
   // Css3 Url
   styleUrl: './onepage-header.component.css',
 })
-
 export class OnepageHeaderComponent {
   // Field
   header:string="Angular Eğitimine Hoşgeldiniz";
   title:string="Html5,Css3, Javascript, Ecmascript, Typescript, Angular"
 
 
-  // Social
+  // Social 
   socialContent:SocialContent[]=[
     {id:1,link:"http://link1",text:"linkedin",icon:"fa-brands fa-linkedin-in",classSocial:"btn btn-primary me-2"},
     {id:1,link:"http://link2",text:"gitHub",icon:"fa-brands fa-github",classSocial:"btn btn-danger me-2"},

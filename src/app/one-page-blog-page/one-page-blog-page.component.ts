@@ -7,39 +7,40 @@ import { Component } from '@angular/core';
 // Router Link
 import { RouterLink } from '@angular/router';
 
-// BlogCard Ekledim
-import { BlogCard } from './BlogCard';
-import { OnePageContent } from './OnePageContent';
+// Blog Card
+import { BlogCard } from '../onepage-main/BlogCard';
+
+// Custom Pipeline
+import { SearchBlogFilterPipe } from './search-blog-filter.pipe';
+
+// Two way Data Bind (ng Model)
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  // Html Selector Template
-  selector: 'app-onepage-main',
+   // Html Selector Template
+  selector: 'app-one-page-blog-page',
 
-  // Bu component tek başına çalışsın
+   // Bu component tek başına çalışsın
   standalone: true,
-
+  
   // import modülümüz
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule,RouterLink,SearchBlogFilterPipe,FormsModule],
 
   // Html Url
-  templateUrl: './onepage-main.component.html',
+  templateUrl: './one-page-blog-page.component.html',
 
   // Css Url
-  styleUrl: './onepage-main.component.css',
+  styleUrl: './one-page-blog-page.component.css'
 })
-export class OnepageMainComponent {
-  // Field
-  onePageContent: OnePageContent[] = [
-    { id: 1, title: 'my work' },
-    { id: 2, title: 'about' },
-    { id: 3, title: 'blog' },
-    { id: 4, title: 'contact' },
-  ];
+// EXPORT
+export class OnePageBlogPageComponent {
 
-  // 1.YOL
-  // blogCard: any[] = [
+// Field
+// dataFilterBlogCategory="frontend-1";
+dataFilterBlogCategory="";
 
-  // 2.YOL (Mock Api)
+ // BlogCard
+
   blogCard: BlogCard[] = [
     {
       id: 1,
@@ -116,16 +117,19 @@ export class OnepageMainComponent {
     },
   ];
 
-  //Constructor
-  constructor() {}
 
-  //Method
-  detailPage() {
-    alert('Detail Page');
-    if (window.confirm('Detail sayfasına gitmek mi istiyorsunuz')) {
-      window.location.href = 'blog';
-    } else {
-      alert('Blog Detail Gidilmedi');
-    }
-  } //end detailPage
-} //end onepa-main-component
+  // Constructor
+  constructor(){}
+
+  // Method
+    //Method
+    detailPage() {
+      alert('Detail Page');
+      if (window.confirm('Detail sayfasına gitmek mi istiyorsunuz')) {
+        window.location.href = 'blog';
+      } else {
+        alert('Blog Detail Gidilmedi');
+      }
+    } //end detailPage
+
+} //end OnePageBlogPageComponent

@@ -1,31 +1,26 @@
 <!-- Blog start -->
 <section id="blog_id">
-  <!--
-    ngIf = expression ? then : else;
-    Eğer blogCard true ise blog çalışsın yoksa noBlogCard çalışsın
-    BlogCard: varsa
-    !BlogCard: yoksa
+  <!-- 
+          ngIf = expression ? then : else;
+          Eğer blogCard true ise blog çalışsın yoksa noBlogCard çalışsın 
+          BlogCard: varsa 
+          !BlogCard: yoksa 
       -->
-
-  <!--
-        ngSwitch
-        <ng-container [ngSwitch]="true">
-        <div *ngSwitchCase="false">First</div>
-        <div *ngSwitchCase="true">Second</div>
-        <div *ngSwitchDefault>Third</div>
-      </ng-container> -->
-
   <!-- Blog Card Start -->
-  <ng-container *ngIf="blogCard; then blog; else noBlogCard"></ng-container>
+
+  <ng-container *ngIf="blogCard; then blog; else noBlogCard"> </ng-container>
+
   <ng-template #blog>
     <div class="container">
       <div class="row">
         <!-- Blog Search -->
         <div class="form-group mt-4 mb-4">
-          <!--
+
+          <!-- 
           One way Data Binding: Tek yönlü veri göstermek (ts üzerinden Html veri göndermek)
           Two way Data Binding: Çift yönlü veri göstermek (ts ile html'de birbirine veri göndermek)
           -->
+         
           <input
             type="text"
             class="form-control"
@@ -36,7 +31,7 @@
 
           <!-- Blog Alert Dismissible -->
           <div
-            *ngIf="dataFilterBlogCategory"
+          *ngIf="dataFilterBlogCategory"
             class="alert alert-danger alert-dismissible fade show mt-2"
             role="alert"
           >
@@ -59,11 +54,11 @@
         <div
           *ngFor="
             let temp of blogCard | searchBlogFilter : dataFilterBlogCategory
-          " class="col-sm-12 col-md-3 col-lg-4"
+          "class="col-sm-12 col-md-3 col-lg-4"
         >
           <a (click)="detailPage()">
             <div class="card mb-3">
-              <img class="card-img-top" [src]="temp.picture" alt="Title"/>
+              <img class="card-img-top" [src]="temp.picture" alt="Title" />
               <div class="card-body">
                 <h4 class="card-title text-center">{{ temp.id }}</h4>
                 <p class="card-text text-center fst-italic fw-bold ">{{ temp.header | uppercase  }}</p>
@@ -71,20 +66,21 @@
                 <!-- <a (click)="detailPage()" [href]="temp.link" class="btn btn-primary">Details Page</a>-->
 
                 <a (click)="detailPage()" class="btn btn-primary d-block"
-                >Details Page</a
+                  >Details Page</a
                 >
                 <span class="text-muted float-start">{{
                   temp.categoryName | titlecase
-                  }}</span>
+                }}</span>
                 <span class="text-muted float-end">{{
                   temp.date | date : "fullDate"
-                  }}</span>
+                }}</span>
               </div>
             </div>
           </a>
         </div>
+
         <!-- Hidden -->
-        <!--
+        <!-- 
           [hidden]=false ise çalışır.
         -->
         <div [hidden]="!(blogCard.length >= 6)">6 tane üründen fazla var.</div>
@@ -93,7 +89,6 @@
       <!--end row -->
     </div>
   </ng-template>
-
   <ng-template #noBlogCard>
     <form action="#">
       <div class="container">
@@ -115,6 +110,22 @@
     </form>
   </ng-template>
   <!-- Blog Card End -->
+
+  <!-- 
+          ngSwitch 
+          <ng-container [ngSwitch]="true">
+          <div *ngSwitchCase="false">First</div>
+          <div *ngSwitchCase="true">Second</div>
+          <div *ngSwitchDefault>Third</div>
+        </ng-container> -->
+
+  <!--    
+          Hidden   
+          <div [hidden]="false">  
+            Eğer false ise çalışır.
+                  Deneme44
+            </div> 
+        -->
   <!--end container -->
 </section>
 <!-- Blog end -->
