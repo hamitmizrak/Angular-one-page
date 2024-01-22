@@ -12,8 +12,6 @@
 /* Alertify */
 @import "alertifyjs/build/css/alertify.min.css";
 /* Alertify Themes */
-@import "alertifyjs/build/css/themes/bootstrap.min.css";
-/* 
-@import "alertifyjs/build/css/themes/semantic.min.css";
-@import "alertifyjs/build/css/themes/default.min.css"; 
-*/
+ @import "alertifyjs/build/css/themes/bootstrap.min.css";
+ /* @import "alertifyjs/build/css/themes/semantic.min.css"; */
+ /* @import "alertifyjs/build/css/themes/default.min.css";  */
