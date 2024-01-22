@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 import { BlogCard } from '../onepage-main/BlogCard';
 
 // Custom Pipeline
-import { SearchBlogFilterPipe } from '../custom-pipeline/search-blog-filter.pipe';
+import { SearchBlogFilterPipe } from '../custom-pipe/search-blog-filter.pipe';
 
 // Two way Data Bind (ng Model)
 import { FormsModule } from '@angular/forms';
