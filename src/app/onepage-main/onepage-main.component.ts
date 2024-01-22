@@ -1,15 +1,21 @@
-// Common Module
+// Angular Common
 import { CommonModule } from '@angular/common';
 
-// Component Core
-import { Component } from '@angular/core';
+// Angular Core
+import { Component, OnInit } from '@angular/core';
 
 // Router Link
 import { RouterLink } from '@angular/router';
 
 // BlogCard Ekledim
 import { BlogCard } from './BlogCard';
+
+// Page Content
 import { OnePageContent } from './OnePageContent';
+
+// SERVICE
+// AlertifyMessageService
+import { AlertifyMessageService } from '../services/alertify-message.service';
 
 @Component({
   // Html Selector Template
@@ -22,13 +28,27 @@ import { OnePageContent } from './OnePageContent';
   imports: [CommonModule, RouterLink],
 
   // Html Url
-  templateUrl: './onepage-main.component.html',
+  templateUrl: './onepage-main.component.html', //1.YOL
+  // template: `<h1>Merhabalar</h1>`, // 2.YOL
 
   // Css Url
   styleUrl: './onepage-main.component.css',
 })
-export class OnepageMainComponent {
+export class OnepageMainComponent implements OnInit { 
   // Field
+
+  // Constructor
+  // Service eklemek istiyorsak
+  constructor(private alertifyMessageService: AlertifyMessageService) {}
+
+  // ngOnInit
+  ngOnInit(): void {
+    // throw new Error('Method not implemented.');
+    // Alertify Calling
+    this.alertifyMessageService.alertMessage("Sayfamıza Hoşgeldiniz.")
+  }
+
+  // Page Content
   onePageContent: OnePageContent[] = [
     { id: 1, title: 'my work' },
     { id: 2, title: 'about' },
@@ -115,9 +135,6 @@ export class OnepageMainComponent {
       categoryName:"backend"
     },
   ];
-
-  //Constructor
-  constructor() {}
 
   //Method
   detailPage() {
