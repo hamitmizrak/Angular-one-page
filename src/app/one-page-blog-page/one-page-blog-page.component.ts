@@ -18,16 +18,17 @@ import { FormsModule } from '@angular/forms';
 
 // BlogArrayService
 import { BlogArrayService } from '../services/blog-array.service';
+import { AlertifyMessageService } from '../services/alertify-message.service';
 
 @Component({
-   // Html Selector Template
+  // Html Selector Template
   selector: 'app-one-page-blog-page',
 
-   // Bu component tek başına çalışsın
+  // Bu component tek başına çalışsın
   standalone: true,
-  
+
   // import modülümüz
-  imports: [CommonModule,RouterLink,SearchBlogFilterPipe,FormsModule],
+  imports: [CommonModule, RouterLink, SearchBlogFilterPipe, FormsModule],
 
   // Html Url
   templateUrl: './one-page-blog-page.component.html',
@@ -36,29 +37,32 @@ import { BlogArrayService } from '../services/blog-array.service';
   styleUrl: './one-page-blog-page.component.css',
 
   // Local Service İçin
-  providers: [BlogArrayService]
+  providers: [BlogArrayService],
 })
 // EXPORT
 export class OnePageBlogPageComponent implements OnInit {
-
-// Field
-// dataFilterBlogCategory="frontend-1";
-dataFilterBlogCategory="";
-
+  // Field
+  // dataFilterBlogCategory="frontend-1";
+  dataFilterBlogCategory = '';
 
   // Constructor
   constructor(
-    private blogArrayService:BlogArrayService,
-  ){}
+    private alertifyMessageService: AlertifyMessageService,
+    private blogArrayService: BlogArrayService
+  ) {}
 
   // ngOnInit
   ngOnInit(): void {
     //throw new Error('Method not implemented.');
+    // Alertify Calling
+    this.alertifyMessageService.alertMessage(
+      `${this.blogArrayService.blogCardFunction().length} tane blog var`
+    );
   }
 
- // BlogCard
- // 1.YOL (Manuel)
- /*
+  // BlogCard
+  // 1.YOL (Manuel)
+  /*
   blogCard: BlogCard[] = [
     {
       id: 1,
@@ -76,17 +80,15 @@ dataFilterBlogCategory="";
   */
 
   // 2.YOL (BLOG CARD): Döngüsel Object
-  blogCard: BlogCard[] =this.blogArrayService.blogCardFunction();
+  blogCard: BlogCard[] = this.blogArrayService.blogCardFunction();
 
   // Method
-    //Method
-    detailPage() {
-      alert('Detail Page');
-      if (window.confirm('Detail sayfasına gitmek mi istiyorsunuz')) {
-        window.location.href = 'blog';
-      } else {
-        alert('Blog Detail Gidilmedi');
-      }
-    } //end detailPage
-
+  detailPage() {
+    alert('Detail Page');
+    if (window.confirm('Detail sayfasına gitmek mi istiyorsunuz')) {
+      window.location.href = 'blog';
+    } else {
+      alert('Blog Detail Gidilmedi');
+    }
+  } //end detailPage
 } //end OnePageBlogPageComponent
