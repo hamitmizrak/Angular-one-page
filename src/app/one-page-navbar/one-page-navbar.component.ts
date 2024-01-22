@@ -33,40 +33,46 @@ export class OnePageNavbarComponent {
 
   // Field
   // homePage: String = 'Anasayfa 44';
-
+ 
   // User Object
   User: User[] = [
     {
       id: 1,
-      username: 'Hamit Mizrak',
-      email: 'hamitmizrak@gmail.com',
-      password: '123456',
+      name: "Hamit",
+      surname: "Mizrak",
+      username: "Mizrak",
+      email: "hamitmizrak@gmail.com",
+      password: "123456",
       pictures:
         'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
+      link: "https://admin1/",
       date: String(new Date().getFullYear()),
-      link: 'https://admin1/',
       rolles: userRolles.admin,
     },
     {
       id: 2,
-      username: 'writer1',
-      email: 'writer1@gmail.com',
-      password: '123456',
+      name: "writer Name",
+      surname: "writer Surname",
+      username: "writer username",
+      email: "writer@gmail.com",
+      password: "123456",
       pictures:
         'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
+      link: "https://writer/",
       date: String(new Date().getFullYear()),
-      link: 'https://writer1/',
       rolles: userRolles.writer,
     },
     {
       id: 3,
-      username: 'user1',
-      email: 'huser1@gmail.com',
-      password: '123456',
+      name: "user name",
+      surname: "user surname",
+      username: "user",
+      email: "user@gmail.com",
+      password: "123456",
       pictures:
         'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
+      link: "https://admin1/",
       date: String(new Date().getFullYear()),
-      link: 'https://user1/',
       rolles: userRolles.user,
     },
   ];
@@ -128,4 +134,4 @@ export class OnePageNavbarComponent {
   darkMode(){
     alert("Dark Mode")
   }
-}
+} //end one-page-navbar-component.ts

@@ -6,8 +6,15 @@
 [Angular GitHub](https://github.com/angular/angular-cli)
 [Angular IO](https://angular.io/)
 [npm](https://www.npmjs.com/)
-
 ---
+
+## VS Kısayollar
+```sh
+ng serve -o
+
+Case Sensitive (JS, Angular,TS,Java)
+Non-Case Sensitive (Html,Css,SQL)
+```
 
 ## VS Kısayollar
 ```sh
@@ -73,11 +80,11 @@
 > ng g interface      onepage-pipeline
 > ng g enum           onepage-pipeline
 > 
-> ng g c component  
-> ng g i interface 
-> ng g s services
-> ng g p pipeline
-> ng g e enum
+> ng g c => component  
+> ng g i => interface 
+> ng g s => services
+> ng g p => pipeline
+> ng g e => enum
 
 ## Angular Configuration
 > npm config list -l
