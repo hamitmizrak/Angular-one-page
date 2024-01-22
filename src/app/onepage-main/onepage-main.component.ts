@@ -18,6 +18,7 @@ import { OnePageContent } from './OnePageContent';
 import { AlertifyMessageService } from '../services/alertify-message.service';
 // BlogArrayService
 import { BlogArrayService } from '../services/blog-array.service';
+import { MyWork } from './MyWork';
 
 @Component({
   // Html Selector Template
@@ -59,7 +60,7 @@ export class OnepageMainComponent implements OnInit {
     this.alertifyMessageService.alertMessage('Sayfamıza Hoşgeldiniz.');
   }
 
-  // Page Content
+  // Page Content Title
   onePageContent: OnePageContent[] = [
     { id: 1, title: 'my work' },
     { id: 2, title: 'about' },
@@ -67,7 +68,82 @@ export class OnepageMainComponent implements OnInit {
     { id: 4, title: 'contact' },
   ];
 
+  // MyWork Icon (Random Icon)
+  myWorkRandomIconFunction(): string {
+    let iconArray: string[] = [
+      'fa-solid fa-image',
+      'fa-solid fa-camera-retro',
+      'fa-solid fa-umbrella',
+      'fa-brands fa-docker',
+      'fa-regular fa-thumbs-up',
+      'fa-solid fa-wifi',
+    ];
+    return iconArray[Math.floor(Math.random() * iconArray.length - 1 + 1)];
+  }
 
+  // MyWork Icon (iconNameRandom)
+  iconNameRandom(): string {
+    let categoryNameArray: string[] = [
+      'frontend',
+      'backend',
+      'database',
+      'mobile',
+      'desktop',
+      'network',
+      'security',
+      'game',
+      'ai',
+      'machine-learning',
+      'devops',
+      'testing',
+      'other',
+    ];
+    return categoryNameArray[
+      Math.floor(Math.random() * categoryNameArray.length - 1 + 1)
+    ];
+  }
+
+  // MyWork Icon (iconColorRandom)
+  iconColorRandom(): string {
+    let iconNameArray: string[] = [
+      'text-primary',
+      'text-secondary',
+      'text-success',
+      'text-warning',
+      'text-danger',
+      'text-info',
+    ];
+    return iconNameArray[
+      Math.floor(Math.random() * iconNameArray.length - 1 + 1)
+    ];
+  }
+
+  // blogCard
+  myWorkFunction(): MyWork[] {
+    // let myWorkIconArray:Array<BlogCard> = [];
+    let myWorkIconArray: MyWork[] = [];
+
+    for (let i = 1; i <= 6; i++) {
+      const randomCategoryName = this.iconNameRandom().toLowerCase();
+      myWorkIconArray.push({
+        id: i,
+        icon: this.myWorkRandomIconFunction() + ' ' + this.iconColorRandom(),
+        header: `${randomCategoryName}-${i}`,
+        // title:   "Title-"+i,
+        text: 'frontend-'
+          .concat(String(i))
+          .concat(
+            randomCategoryName +
+              ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate error tempore officia unde! Ut dignissimos consequatur, minus quasi, suscipit, voluptate corporis debitis ab tempore perferendis alias? Sint, porro aspernatur! Ipsum possimus nobis non perspiciatis nesciunt pariatur quia quos. Vel, ipsa, modi cumque possimus enim provident dolorum perferendis praesentium commodi itaque a dolorem recusandae ea voluptatem odio, esse aliquid nostrum. Molestias cupiditate blanditiis ut sequi velit corporis deserunt reprehenderit a voluptatem accusantium, modi dicta provident iure corrupti hic vitae. Dolorem illo perferendis omnis asperiores dignissimos neque quos, natus repellat voluptatum.'
+          ),
+      });
+    }
+    return myWorkIconArray;
+  }
+
+  // SECTION About)
+
+  //////////////////////////////////////////////////////////////////////
   // 1.YOL (BLOG CARD)
   /*
   blogCard: any[] = []
@@ -88,8 +164,9 @@ export class OnepageMainComponent implements OnInit {
   */
 
   // 2.YOL (BLOG CARD): Döngüsel Object
-  blogCard: BlogCard[] =this.blogArrayService.blogCardFunction();
+  blogCard: BlogCard[] = this.blogArrayService.blogCardFunction();
 
+  //////////////////////////////////////////////////////////////////////
   //Method
   detailPage() {
     alert('Detail Page');

@@ -53,7 +53,7 @@ export class OnePageBlogPageComponent implements OnInit {
 
   // ngOnInit
   ngOnInit(): void {
-    //throw new Error('Method not implemented.');
+    // throw new Error('Method not implemented.');
     // Alertify Calling
     this.alertifyMessageService.alertMessage(
       `${this.blogArrayService.blogCardFunction().length} tane blog var`
