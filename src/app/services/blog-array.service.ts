@@ -91,5 +91,19 @@ export class BlogArrayService {
   }
 
   // Blog Card
-  // 3.YOL ( blogCard: Json-server): Api isteklerin
+  // rxjs 
+  // 3.YOL ( blogCard: Json-server): Api istekleri
+
+  // Json Server (fake api) blog.json
+  // Api (GET)
+
+  // Register Componente (Form)
+  // Api (POST) Json Server 
+
+  // 4.YOL
+  // Node js 
+  // Express 
+  // Mongoose (Mongo Atlas)
+  // Api 
+
 } //end BlogArrayService
