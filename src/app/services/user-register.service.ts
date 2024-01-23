@@ -21,6 +21,7 @@ export class UserRegisterService implements OnInit {
   // Field
   // Api Path
   path: string = 'http://localhost:2222/user';
+  pathMongo: string = 'http://localhost:1111/user/register';
 
   // Constructor
   /*
@@ -47,7 +48,7 @@ export class UserRegisterService implements OnInit {
   userListRegisterObservable(): Observable<UserRegister[]> {
     //this.alertifyMessageService.alertSuccess('User List Success');
     // Listeleme
-    return this.httpClient.get<UserRegister[]>(this.path).pipe(
+    return this.httpClient.get<UserRegister[]>(this.pathMongo).pipe(
       tap((response) => {
         console.log(response);
         console.log(JSON.stringify(response));
@@ -65,7 +66,7 @@ export class UserRegisterService implements OnInit {
         'Content-Type': 'application/json',
       })
     }
-    return this.httpClient.post<UserRegister>(this.path,userRegister,headerHttpOptions).pipe(
+    return this.httpClient.post<UserRegister>(this.pathMongo,userRegister).pipe(
       tap((response) => {
         console.log(response);
         console.log(JSON.stringify(response));

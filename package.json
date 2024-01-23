@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
+    "nodemon": "nodemon  _2_nodejs/NodeJsMongoDbExpressRestApi.js",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
