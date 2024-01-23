@@ -1,5 +1,10 @@
+// CORE
 import { Component } from '@angular/core';
+
+// COMMON
 import { CommonModule } from '@angular/common';
+
+// ROUTER
 import { RouterOutlet } from '@angular/router';
 
 // Header, Main, Footer
@@ -8,6 +13,13 @@ import { OnepageMainComponent } from './onepage-main/onepage-main.component';
 import { OnepageFooterComponent } from './onepage-footer/onepage-footer.component';
 import { OnepageProjectNameComponent } from './onepage-project-name/onepage-project-name.component';
 import { OnePageNavbarComponent } from './one-page-navbar/one-page-navbar.component';
+
+// API GET/POST/PUT/DELETE
+import { HttpClientModule } from '@angular/common/http';
+
+// SERVICE
+import { AlertifyMessageService } from './services/alertify-message.service';
+import { UserRegister } from './one-page-register/UserRegister';
 
 // Dikkat: Bütün Componentleri buraya eklemek zorundayız
 @Component({
@@ -26,7 +38,11 @@ import { OnePageNavbarComponent } from './one-page-navbar/one-page-navbar.compon
     OnepageMainComponent, 
     OnepageFooterComponent,
     OnePageNavbarComponent,
+    HttpClientModule, // Api istekleri icin
   ],
+
+  // Global Servis Olması için Yazdim
+  providers:[AlertifyMessageService,UserRegister],
 
   // Html'de bu componentte kullanacağımız html dosyası
   // template:  Html kullanmadan direk html kodlarını template:``

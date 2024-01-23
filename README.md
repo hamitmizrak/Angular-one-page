@@ -28,13 +28,21 @@ Non-Case Sensitive (Html,Css,SQL)
 > npm -v
 > npm version
 > npm list -g
+>
 > npm install -g typescript
 > npm install -g @angular/cli
 > npm install alertifyjs
 > npm install bootstrap
+> npm install alertifyjs bootstrap jquery
 > npm install font-awesome
 > npm install jquery
+>
+> npm install -g json-server
 > npm install json-server
+> 
+> npm i -g express mongoose dotenv body-parser
+> npm i express mongoose dotenv body-parser --save
+>
 > ng version
 > ng v
 > ng new one-page
@@ -47,6 +55,18 @@ Non-Case Sensitive (Html,Css,SQL)
 > ng serve -o --port 9999  
 > ng --help
 ```
+
+## Projeleri Working
+- ng serve -o --port 1111  (ANGULAR)
+-
+- tsc UserRegister.ts
+- tsc -w UserRegister.ts
+- 
+- json-server --watch blog.json (JSON-SERVER)
+- json-server --watch blog.json --port 2222 (JSON-SERVER)
+- http://localhost:2222/user
+- 
+- npm nodemon start    (Node JS)
 
 ## Proje Serve
 ```sh

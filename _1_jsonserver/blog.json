@@ -1,0 +1,47 @@
+{
+    "user":[
+        {
+            "id":"1",
+            "username":"HamitMizrak",
+            "email":"hamitmizrak@gmail.com",
+            "password":"123456",
+            "created_date":"21/01/2024"
+        },
+        {
+            "id":"2",
+            "username":"user2",
+            "email":"deneme2@gmail.com",
+            "password":"123456",
+            "created_date":"19/01/2024"
+        },
+        {
+            "id":"3",
+            "username":"user3",
+            "email":"deneme3@gmail.com",
+            "password":"123456",
+            "created_date":"21/01/2024"
+        },
+        {
+            "id":"4",
+            "username":"user4",
+            "email":"deneme4@gmail.com",
+            "password":"123456",
+            "created_date":"21/01/2024"
+        },
+        {
+            "id":"5",
+            "username":"user5",
+            "email":"deneme5@gmail.com",
+            "password":"123456",
+            "created_date":"21/01/2024"
+        }
+    ],
+
+    "blog":[
+        {
+            "id":"1",
+            "title":"test",
+            "content":"test"
+        }
+    ]
+}
