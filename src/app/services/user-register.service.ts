@@ -45,7 +45,7 @@ export class UserRegisterService implements OnInit {
   // getUserRegisterObservabler():Observable<any> {
   // Bu fonksiyon: Observable dönecek ve türü UserRegister olacaktır.
   userListRegisterObservable(): Observable<UserRegister[]> {
-    this.alertifyMessageService.alertSuccess('User List Success');
+    //this.alertifyMessageService.alertSuccess('User List Success');
     // Listeleme
     return this.httpClient.get<UserRegister[]>(this.path).pipe(
       tap((response) => {

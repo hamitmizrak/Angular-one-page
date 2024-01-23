@@ -1,1 +1,181 @@
-<p>REGISTER</p>
+<h2 class="text-center display5 text-primary mt-2 mb-2 text-capitalize">
+  User Register
+</h2>
+
+<div class="container w-75">
+  <div class="row">
+    <!-- USER REGISTER LIST -->
+
+      <h4 class="text-center display5 text-primary mt-2 mb-2 text-capitalize">
+        User Register List
+      </h4>
+      <!--
+          table.table-hover.table-striped.table-bordered.shadow>thead>tr.center-align>th^^tbody>tr>td
+       -->
+      <table class="table table-hover table-striped table-bordered shadow">
+        <thead>
+          <tr class="center-align">
+            <th>ID</th>
+            <th>username</th>
+            <th>email</th>
+            <th>password</th>
+            <th>Date</th>
+            <th>Update</th>
+            <th>View</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let list of userList">
+            <td>{{ list.id }}</td>
+            <td>{{ list.username }}</td>
+            <td>{{ list.email }}</td>
+            <td>{{ list.password }}</td>
+            <td>{{ list.created_date }}</td>
+            <!-- <td>{{ list.created_date | date : "fullDate" }}</td> -->
+            <td>
+              <a
+                class="btn btn-primary"
+                href="#"
+                [routerLink]="['/register/id', list.id]"
+              >
+                <i class="fa-solid fa-wrench"></i>
+              </a>
+            </td>
+
+            <td>
+              <a
+                class="btn btn-danger"
+                href="#"
+                [routerLink]="['/register/id', list.id]"
+              >
+                <i class="fa-solid fa-binoculars"></i>
+              </a>
+            </td>
+
+            <td>
+              <a
+                class="btn btn-primary"
+                href="#"
+                [routerLink]="['/register/id', list.id]"
+              >
+                <i class="fa-solid fa-trash"></i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    <!-- USER REGISTER LIST -->
+      <h4 class="text-center display5 text-primary mt-2 mb-2 text-capitalize">
+        User Register Create
+      </h4>
+      <form 
+      class="mb-5 mt-5"
+      #registerForm="ngForm" 
+      (ngSubmit)="registerCreate(registerForm)"
+      >
+        <!-- USERNAME -->
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control mb-3"
+            placeholder="Username"
+            title="Username"
+            id="username"
+            name="username"
+            required
+            autofocus
+            #usernameValue44="ngModel"
+            [(ngModel)]="userCreate.username"
+          />
+          <div
+          *ngIf="usernameValue44.invalid&&usernameValue44.dirty"
+            class="alert alert-danger alert-dismissible fade show"
+            role="alert"
+          >
+            <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+            ></button>
+            <strong>Kullanıcı Adını Girmediniz</strong>
+          </div>
+          
+        </div>
+        <!-- EMAİL -->
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control mb-3"
+            placeholder="Email"
+            title="email"
+            id="email"
+            name="email"
+            required
+            #emailValue44="ngModel"
+            [(ngModel)]="userCreate.email"
+          />
+          <div
+          *ngIf="emailValue44.invalid&&emailValue44.dirty"
+            class="alert alert-danger alert-dismissible fade show"
+            role="alert"
+          >
+            <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+            ></button>
+            <strong>Emailinizi Girmediniz</strong>
+          </div>
+        </div>
+        <!-- PASSWORD -->
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control mb-3"
+            placeholder="password"
+            title="password"
+            id="password"
+            name="password"
+            required
+            #passwordValue44="ngModel"
+            [(ngModel)]="userCreate.password"
+          />
+          <div
+          *ngIf="passwordValue44.invalid&&passwordValue44.dirty"
+            class="alert alert-danger alert-dismissible fade show"
+            role="alert"
+          >
+            <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+            ></button>
+            <strong>Şifrenizi Girmediniz</strong>
+          </div>
+        </div>
+
+        <div class="form-group">
+
+            <button 
+            type="clear"
+            class="btn btn-danger me-2" 
+            >
+            <i class="fa-solid fa-trash"></i>
+            </button>
+
+            <button 
+            type="submit"
+            [disabled]="registerForm.invalid"
+            class="btn btn-primary btn-block" 
+            >
+                <i class="fa-solid fa-plus"></i> 
+            </button>
+        </div>
+      </form>
+    </div>
+  </div>

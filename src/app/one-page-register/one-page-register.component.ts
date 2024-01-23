@@ -50,7 +50,7 @@ export class OnePageRegisterComponent implements OnInit {
   // ngOnInit (List)
   ngOnInit(): void {
     // AlertifyMessage
-    this.alertifyMessageService.alertSuccess('Register Sayfasına Hoşgeldiniz');
+    //this.alertifyMessageService.alertSuccess('Register Sayfasına Hoşgeldiniz');
     this.userRegisterService
       .userListRegisterObservable()
       .subscribe((response) => {
@@ -69,6 +69,9 @@ export class OnePageRegisterComponent implements OnInit {
     const formData =
       form.value.username + ' ' + form.value.email + ' ' + form.value.password;
     this.alertifyMessageService.alertSuccess(formData);
+    this.userCreate.id=Number( Math.ceil(Math.random()*10000+1));
+    this.userCreate.created_date=String(new Date());
+    this.alertifyMessageService.alertSuccess(String(this.userCreate.id));
 
     // Service subscribe
     this.userRegisterService
