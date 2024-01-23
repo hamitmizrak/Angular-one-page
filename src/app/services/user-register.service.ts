@@ -3,7 +3,7 @@ import { AlertifyMessageService } from './alertify-message.service';
 import { Injectable, OnInit } from '@angular/core';
 
 // Api icin
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 
 // RxJS
 import { Observable, catchError, tap, throwError } from 'rxjs';
@@ -55,6 +55,25 @@ export class UserRegisterService implements OnInit {
       catchError(this.observableUserRegisterCatchErrorHandling)
     );
   } //end User Register List Api
+
+
+  // CREATE
+  createUserRegisterObservable(userRegister: UserRegister): Observable<UserRegister> {
+    // HEADERS
+    const headerHttpOptions={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json',
+      })
+    }
+    return this.httpClient.post<UserRegister>(this.path,userRegister,headerHttpOptions).pipe(
+      tap((response) => {
+        console.log(response);
+        console.log(JSON.stringify(response));
+      }),
+      catchError(this.observableUserRegisterCatchErrorHandling)
+    );
+  } // createUserRegisterObservable
+
 
   // Error Handling
   observableUserRegisterCatchErrorHandling(err: HttpErrorResponse) {

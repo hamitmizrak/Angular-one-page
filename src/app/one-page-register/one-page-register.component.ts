@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 import { AlertifyMessageService } from '../services/alertify-message.service';
 
 // Eğer form ile ilgili çalışma yapacaksak
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { UserRegisterService } from '../services/user-register.service';
 import { UserRegister } from './UserRegister';
 
@@ -38,7 +38,7 @@ export class OnePageRegisterComponent implements OnInit {
   // List
   userList: UserRegister[] = new Array<UserRegister>();
 
-  // Create
+  // Create (ngForm)
   userCreate: UserRegister = new UserRegister();
 
   // Constructor
@@ -47,13 +47,36 @@ export class OnePageRegisterComponent implements OnInit {
     private userRegisterService: UserRegisterService
   ) {}
 
-  // ngOnInit
+  // ngOnInit (List)
   ngOnInit(): void {
+    // AlertifyMessage
     this.alertifyMessageService.alertSuccess('Register Sayfasına Hoşgeldiniz');
-  
+    this.userRegisterService
+      .userListRegisterObservable()
+      .subscribe((response) => {
+        // Observable
+        this.userList = response;
+        console.log(response);
+        //this.alertifyMessageService.alertSuccess(JSON.stringify(response))
+      });
     // Observable subscribe
     //throw new Error('Method not implemented.');
   }
 
   // Method
+  registerCreate(form: NgForm) {
+    // Formdan gelen verileri göstermek
+    const formData =
+      form.value.username + ' ' + form.value.email + ' ' + form.value.password;
+    this.alertifyMessageService.alertSuccess(formData);
+
+    // Service subscribe
+    this.userRegisterService
+      .createUserRegisterObservable(this.userCreate)
+      .subscribe((response) => {
+        this.alertifyMessageService.alertSuccess(form + ' Eklendi');
+        form.reset();
+      });
+  } //end registerCreate
+
 } //end OnePageRegisterComponent

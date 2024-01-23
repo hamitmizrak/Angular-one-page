@@ -17,9 +17,11 @@ import { OnePageNavbarComponent } from './one-page-navbar/one-page-navbar.compon
 // API GET/POST/PUT/DELETE
 import { HttpClientModule } from '@angular/common/http';
 
-// SERVICE
+// SERVICE (AlertifyMessageService)
 import { AlertifyMessageService } from './services/alertify-message.service';
-import { UserRegister } from './one-page-register/UserRegister';
+
+// SERVICE (UserRegisterService)
+import { UserRegisterService } from './services/user-register.service';
 
 // Dikkat: Bütün Componentleri buraya eklemek zorundayız
 @Component({
@@ -42,7 +44,7 @@ import { UserRegister } from './one-page-register/UserRegister';
   ],
 
   // Global Servis Olması için Yazdim
-  providers:[AlertifyMessageService,UserRegister],
+  providers:[AlertifyMessageService,UserRegisterService],
 
   // Html'de bu componentte kullanacağımız html dosyası
   // template:  Html kullanmadan direk html kodlarını template:``
