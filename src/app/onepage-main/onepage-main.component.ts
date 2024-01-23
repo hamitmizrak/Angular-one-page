@@ -14,10 +14,13 @@ import { BlogCard } from './BlogCard';
 import { OnePageContent } from './OnePageContent';
 
 // SERVICE
-// AlertifyMessageService
+// AlertifyMessageService (Global Service)
 import { AlertifyMessageService } from '../services/alertify-message.service';
-// BlogArrayService
+
+// BlogArrayService (Local Service)
 import { BlogArrayService } from '../services/blog-array.service';
+
+// MyWork
 import { MyWork } from './MyWork';
 
 @Component({
@@ -84,19 +87,9 @@ export class OnepageMainComponent implements OnInit {
   // MyWork Icon (iconNameRandom)
   iconNameRandom(): string {
     let categoryNameArray: string[] = [
-      'frontend',
-      'backend',
-      'database',
-      'mobile',
-      'desktop',
-      'network',
-      'security',
-      'game',
-      'ai',
-      'machine-learning',
-      'devops',
-      'testing',
-      'other',
+      'frontend', 'backend', 'database', 'mobile', 'desktop',
+      'network', 'security', 'game', 'ai', 'machine-learning',
+      'devops', 'testing', 'other',
     ];
     return categoryNameArray[
       Math.floor(Math.random() * categoryNameArray.length - 1 + 1)
@@ -118,7 +111,7 @@ export class OnepageMainComponent implements OnInit {
     ];
   }
 
-  // blogCard
+  // My Work
   myWorkFunction(): MyWork[] {
     // let myWorkIconArray:Array<BlogCard> = [];
     let myWorkIconArray: MyWork[] = [];
