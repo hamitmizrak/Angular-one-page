@@ -31,12 +31,10 @@ const nodejsMongoSchema= mongoose.Schema({
         lowercase:true
     },
     password:{
-        type:Number,
+        type:String,
         required:true,
-        trim:true,
         minLenght:3,
-        maxLength:44,
-        lowercase:true,
+        maxLength:44
     },
     created_date:{
         type:Date,

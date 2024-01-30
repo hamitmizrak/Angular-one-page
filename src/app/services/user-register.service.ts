@@ -47,8 +47,14 @@ export class UserRegisterService implements OnInit {
   // Bu fonksiyon: Observable dönecek ve türü UserRegister olacaktır.
   userListRegisterObservable(): Observable<UserRegister[]> {
     //this.alertifyMessageService.alertSuccess('User List Success');
+
+    const headerHttpOptions={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json',
+      })
+    }
     // Listeleme
-    return this.httpClient.get<UserRegister[]>(this.pathMongo).pipe(
+    return this.httpClient.get<UserRegister[]>(this.pathMongo,headerHttpOptions).pipe(
       tap((response) => {
         console.log(response);
         console.log(JSON.stringify(response));
@@ -66,7 +72,7 @@ export class UserRegisterService implements OnInit {
         'Content-Type': 'application/json',
       })
     }
-    return this.httpClient.post<UserRegister>(this.pathMongo,userRegister).pipe(
+    return this.httpClient.post<UserRegister>(this.pathMongo,userRegister,headerHttpOptions).pipe(
       tap((response) => {
         console.log(response);
         console.log(JSON.stringify(response));

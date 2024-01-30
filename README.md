@@ -10,10 +10,17 @@
 
 ## VS Kısayollar
 ```sh
-ng serve -o
+ng serve -o (Angular Ana Projesi)
+npm run nodemon (_2_nodejs)
 
 Case Sensitive (JS, Angular,TS,Java)
 Non-Case Sensitive (Html,Css,SQL)
+
+npm -v
+node -v
+nodemon -v
+express -v
+
 ```
 
 ## VS Kısayollar
@@ -57,10 +64,12 @@ Non-Case Sensitive (Html,Css,SQL)
 ```
 
 ## Projeleri Working
-- ng serve -o --port 1111  (ANGULAR)
--
+- ng serve -o --port 2222  (ANGULAR: 2222 port)
+- npm run nodemon (NODE JS:1111 port)
 - tsc UserRegister.ts
 - tsc -w UserRegister.ts
+- 
+- npm i cors 
 - 
 - json-server --watch blog.json (JSON-SERVER)
 - json-server --watch blog.json --port 2222 (JSON-SERVER)
